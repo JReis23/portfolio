@@ -1,12 +1,14 @@
 <script>
-	import Moi from '../components/index/Moi.svelte';
+	import Moi from '../components/index/Me.svelte';
 	import Main from '../components/index/Main.svelte';
+	import WorkPlaces from '../components/index/WorkPlaces.svelte';
 </script>
 
 <div>
 	<main>
 		<Main />
 		<Moi />
+		<WorkPlaces />
 	</main>
 </div>
 

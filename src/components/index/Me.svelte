@@ -44,11 +44,23 @@
 	}
 
 	li {
-		list-style: inside;
+		color: #8993b0;
+		font-family: Fira Code Regular;
 	}
 
 	li::before {
 		content: '▹';
+		color: rgba(88, 227, 197, 1);
+		margin-right: 1.175rem;
+	}
+
+	ul {
+		padding-right: 5rem;
+		padding-top: 3rem;
+	}
+
+	img {
+		border-radius: 5px;
 	}
 
 	picture::after {
@@ -60,10 +72,12 @@
 		top: 0;
 		bottom: 0;
 		transition: 0.5s ease-in-out;
+		border-radius: 5px;
 	}
 
 	picture {
 		transition: 0.5s ease-in-out;
+		border-radius: 5px;
 	}
 
 	picture::before {
@@ -76,6 +90,7 @@
 		width: 100%;
 		height: 100%;
 		transition: 0.5s ease-in-out;
+		border-radius: 5px;
 	}
 
 	picture:hover {

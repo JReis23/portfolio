@@ -46,7 +46,8 @@
 
     body {
         background: #0a182e;
-        height: 200vh
+        height: 200vh;
+        counter-reset: section;
     }
 
     h1 {
@@ -79,6 +80,12 @@
         font-family: 'Calibre Regular';
         font-size: 1.175em
     }
+
+
+    section {
+        padding: 6rem 0;
+    }
+
     .numbered-heading {
         display: flex;
         -webkit-box-align: center;
@@ -88,7 +95,7 @@
         widht: 100%;
         white-space: nowrap;
     }
-
+    
     .numbered-heading::before {
         position: relative;
         counter-increment: section 1;
