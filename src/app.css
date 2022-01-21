@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+
+    @font-face {
+        src: url('../static/font/FiraCode-Light.ttf');
+        font-family: 'Fira Code Light'
+    }
+
+    @font-face {
+        src: url('../static/font/FiraCode-Bold.ttf');
+        font-family: 'Fira Code Bold'
+    }
+
+    @font-face {
+        src: url('../static/font/FiraCode-Medium.ttf');
+        font-family: 'Fira Code Medium'
+    }
+
+    @font-face {
+        src: url('../static/font/FiraCode-Regular.ttf');
+        font-family: 'Fira Code Regular'
+    }
+
+    @font-face {
+        src: url('../static/font/FiraCode-Retina.ttf');
+        font-family: 'Fira Code Retina'
+    }
+
+    @font-face {
+        src: url('../static/font/Calibre-Regular.ttf');
+        font-family: 'Calibre Regular'
+    }
+
+    @font-face {
+        src: url('../static/font/Calibre-Semibold.ttf');
+        font-family: 'Calibre Semibold'
+    }
+
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #0a182e;
+        height: 200vh
+    }
+
+    h1 {
+        color: #56dec2;
+        font-family: 'Fira Code Light';
+		font-size: 0.8rem;
+
+    }
+
+    h2 {
+        color: #ccd6f6;
+        font-family: 'Calibre Semibold';
+        font-size: 2rem;
+    }
+
+    h3 {
+        color: #8993b0;
+        font-family: 'Calibre Semibold'
+    }
+
+    a {
+        color: #afb8d7;
+        font-family: 'Fira Code Light';
+		font-size: 0.8rem;
+
+    }
+
+    p {
+        color: #717a97;
+        font-family: 'Calibre Regular';
+        font-size: 1.175em
+    }
+    .numbered-heading {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        margin: 1rem 0 2.5rem; 
+        widht: 100%;
+        white-space: nowrap;
+    }
+
+    .numbered-heading::before {
+        position: relative;
+        counter-increment: section 1;
+        content: "0" counter(section) ".";
+        color: #56dec2;
+        font-family: 'Fira Code Light';
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+
+    .numbered-heading::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: -5px;
+        width: 300px;
+        height: 1px;
+        margin-left: 1.2rem;
+        background: #8993b0;
+    }
+
+
+
+}
