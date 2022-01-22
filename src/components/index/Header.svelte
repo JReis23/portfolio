@@ -68,6 +68,10 @@
 		counter-increment: item 1;
 	}
 
+	li::before {
+		content: '';
+	}
+
 	a::before {
 		content: '0' counter(item) '.';
 		color: #58e3c5;

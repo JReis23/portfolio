@@ -2,6 +2,7 @@
 	import Moi from '../components/index/Me.svelte';
 	import Main from '../components/index/Main.svelte';
 	import WorkPlaces from '../components/index/WorkPlaces.svelte';
+	import Projects from '../components/index/Projects.svelte';
 </script>
 
 <div>
@@ -9,6 +10,7 @@
 		<Main />
 		<Moi />
 		<WorkPlaces />
+		<Projects />
 	</main>
 </div>
 

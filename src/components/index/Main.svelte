@@ -24,7 +24,6 @@
 		justify-content: center;
 		flex-direction: column;
 		margin: 0 auto;
-		padding: 0 10rem;
 	}
 
 	h1 {

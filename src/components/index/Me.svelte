@@ -18,9 +18,11 @@
 					<li>Svelte</li>
 					<li>Django</li>
 					<li>Python</li>
+					<li>Tailwind</li>
 				</ul>
 				<ul>
 					<li>JavaScript</li>
+					<li>Bootstrap</li>
 					<li>HTML</li>
 					<li>CSS</li>
 				</ul>
@@ -35,17 +37,8 @@
 </section>
 
 <style>
-	section {
-		max-width: 1000px;
-	}
-
 	.about {
 		max-width: 75ch;
-	}
-
-	li {
-		color: #8993b0;
-		font-family: Fira Code Regular;
 	}
 
 	li::before {
