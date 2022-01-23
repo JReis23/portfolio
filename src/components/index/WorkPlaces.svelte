@@ -52,7 +52,7 @@
 	<h2 class="numbered-heading">Où j'ai travaillé</h2>
 	<div class="flex">
 		<div class="buttons flex flex-col self-center">
-			<Button on:click={handleButtonOne} type="secondary">Montauban</Button>
+			<Button on:click={handleButtonOne} autofocus type="secondary">Montauban</Button>
 			<Button on:click={handleButtonTwo} type="secondary">Rural Web Factory</Button>
 			<Button on:click={handleButtonThree} type="secondary">Patriarca</Button>
 			<Button on:click={handleButtonFour} type="secondary">MO Rousseau</Button>
@@ -176,9 +176,6 @@
 </section>
 
 <style>
-	p {
-	}
-
 	a {
 		display: inline-block;
 		text-decoration: none;

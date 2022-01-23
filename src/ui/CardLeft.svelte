@@ -106,7 +106,7 @@
 			</a>
 		</div>
 	</div>
-	<a href={link} class="img-left shadow-xl">
+	<a href={link} target="_blank" class="img-left shadow-xl">
 		<img src={image} alt={imageAlt} />
 	</a>
 </article>

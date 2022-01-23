@@ -1,6 +1,7 @@
 <script>
 	export let type = 'primary';
 	export let href = null;
+	export let autofocus = false;
 </script>
 
 {#if href}
@@ -8,7 +9,8 @@
 		<slot />
 	</a>
 {:else}
-	<button class={type} on:click>
+	<!-- svelte-ignore a11y-autofocus -->
+	<button class={type} on:click {autofocus}>
 		<slot />
 	</button>
 {/if}
@@ -42,6 +44,7 @@
 	.secondary:focus {
 		border-left: 3px solid #58e3c5;
 		background: rgba(88, 227, 197, 0.1);
+		outline: none;
 	}
 
 	.secondary:hover {

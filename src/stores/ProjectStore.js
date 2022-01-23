@@ -10,7 +10,7 @@ const ProjectStore = writable([
 		link: 'https://github.com/JReis23/second-dummy.git',
 		github: 'https://github.com/JReis23/second-dummy.git',
 		description:
-			'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
+			'At vero eos et accusamus et iusto odio dignissimos ducimus qui lores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
 	},
 	{
 		id: 2,
@@ -21,7 +21,7 @@ const ProjectStore = writable([
 		link: 'https://joao-back-ecommerce-prod.herokuapp.com/store/',
 		github: 'https://github.com/JReis23/storefront.git',
 		description:
-			'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
+			'At vero eos et accusamus et iusto odio dignissimos ducimuluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
 	},
 	{
 		id: 3,
@@ -32,7 +32,7 @@ const ProjectStore = writable([
 		link: 'https://www.noveoo.fr',
 		github: 'https://github.com/JReis23/site_php.git',
 		description:
-			'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
+			'At vero eos et accusamus et iusto odio dignissimos ducimus  et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
 	},
 	{
 		id: 4,
@@ -43,7 +43,7 @@ const ProjectStore = writable([
 		link: 'http://num-montauban.erp-montauban.fr/login/?next=/',
 		github: 'https://github.com/JReis23/django_montauban.git',
 		description:
-			'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
+			'At vero eos et accusamus  excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
 	}
 ]);
 

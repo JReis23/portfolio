@@ -9,7 +9,7 @@
 </script>
 
 <article class="card-right">
-	<a href="/" class="img-right shadow-xl">
+	<a href={link} target="_blank" class="img-right shadow-xl">
 		<img src={image} alt={imageAlt} />
 	</a>
 	<div class="title items-end flex flex-col justify-center">
