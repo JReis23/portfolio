@@ -46,7 +46,6 @@
 
     body {
         background: #0a182e;
-        height: 100vh;
         counter-reset: section;
     }
 

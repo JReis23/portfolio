@@ -13,7 +13,9 @@
 	</p>
 
 	<div class="button mt-16">
-		<Button href="/">Regardez mon Curriculum!</Button>
+		<Button href="https://drive.google.com/uc?id=1rHdIcz03FiWetX8JjRCwvVnfiVIvrbfR" blank="_blank"
+			>Regardez mon Curriculum!</Button
+		>
 	</div>
 </section>
 

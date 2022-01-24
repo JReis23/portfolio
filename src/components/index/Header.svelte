@@ -21,7 +21,10 @@
 					<li><a href="/"> Contact</a></li>
 				</ol>
 				<div class="button">
-					<Button href="/">Curriculum</Button>
+					<Button
+						href="https://drive.google.com/uc?id=1rHdIcz03FiWetX8JjRCwvVnfiVIvrbfR"
+						blank="_blank">Curriculum</Button
+					>
 				</div>
 			</div>
 		</nav>
@@ -79,6 +82,11 @@
 	}
 
 	a:hover {
+		color: #58e3c5;
+	}
+
+	a:focus,
+	a:active {
 		color: #58e3c5;
 	}
 

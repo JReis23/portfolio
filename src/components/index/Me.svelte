@@ -54,11 +54,13 @@
 
 	img {
 		border-radius: 5px;
+		z-index: 1;
+		position: relative;
 	}
 
 	picture::after {
 		content: '';
-		background: rgba(88, 227, 197, 0.6);
+		background: rgba(88, 227, 197, 0.3);
 		position: absolute;
 		display: block;
 		width: 100%;
@@ -66,18 +68,19 @@
 		bottom: 0;
 		transition: 0.5s ease-in-out;
 		border-radius: 5px;
+		z-index: 1;
 	}
 
 	picture {
 		transition: 0.5s ease-in-out;
 		border-radius: 5px;
+		z-index: 1;
 	}
 
 	picture::before {
 		content: '';
 		border: 1px solid #58e3c5;
 		position: absolute;
-		z-index: -1;
 		top: 10px;
 		left: 10px;
 		width: 100%;

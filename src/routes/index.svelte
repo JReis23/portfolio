@@ -3,6 +3,7 @@
 	import Main from '../components/index/Main.svelte';
 	import WorkPlaces from '../components/index/WorkPlaces.svelte';
 	import Projects from '../components/index/Projects.svelte';
+	import Contact from '../components/index/Contact.svelte';
 </script>
 
 <div>
@@ -11,6 +12,7 @@
 		<Moi />
 		<WorkPlaces />
 		<Projects />
+		<Contact />
 	</main>
 </div>
 

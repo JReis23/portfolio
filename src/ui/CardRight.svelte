@@ -161,10 +161,9 @@ l9.6,4.8L54.6,48.1z"
 		height: 100%;
 	}
 
-	/* a {
-		height: 100%;
-		width: 100%;
-	} */
+	img:hover {
+		filter: grayscale(1);
+	}
 
 	.title {
 		grid-area: title;

@@ -8,5 +8,10 @@ module.exports = {
 			'green-astral': '#58e3c5'
 		}
 	},
-	plugins: []
+	plugins: [require('daisyui')],
+	daisyui: {
+		styled: true,
+		themes: false,
+		rtl: false
+	}
 };

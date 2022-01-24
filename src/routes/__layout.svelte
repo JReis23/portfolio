@@ -15,13 +15,6 @@
 	});
 </script>
 
-<svelte:head>
-	<script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
-	<script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
-	<script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
-	<script defer src="../node_modules/@fortawesome/fontawesome-free/svgs/fontawesome.js"></script>
-</svelte:head>
-
 {#if render}
 	<div in:fade={{ delay: 1000, duration: 1500 }}>
 		<Header />
