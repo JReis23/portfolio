@@ -1,11 +1,21 @@
 <script>
 	import Button from '../../ui/Button.svelte';
+	import { onMount } from 'svelte';
 
 	let buttonOne = true;
 	let buttonTwo = false;
 	let buttonThree = false;
 	let buttonFour = false;
 	let buttonFive = false;
+	let active;
+
+	// const maybeyes = () => {
+	// 	if (!buttonOne) {
+	// 		active = '';
+	// 	} else {
+	// 		active = '';
+	// 	}
+	// };
 
 	const handleButtonOne = () => {
 		buttonOne = true;
@@ -52,11 +62,21 @@
 	<h2 class="numbered-heading">Où j'ai travaillé</h2>
 	<div class="flex">
 		<div class="buttons flex flex-col self-center">
-			<Button on:click={handleButtonOne} autofocus type="secondary">Montauban</Button>
-			<Button on:click={handleButtonTwo} type="secondary">Rural Web Factory</Button>
-			<Button on:click={handleButtonThree} type="secondary">Patriarca</Button>
-			<Button on:click={handleButtonFour} type="secondary">MO Rousseau</Button>
-			<Button on:click={handleButtonFive} type="secondary">Vodafone</Button>
+			<Button on:click={handleButtonOne} active={buttonOne ? 'active' : null} type="secondary"
+				>Montauban</Button
+			>
+			<Button on:click={handleButtonTwo} active={buttonTwo ? 'active' : null} type="secondary"
+				>Rural Web Factory</Button
+			>
+			<Button on:click={handleButtonThree} active={buttonThree ? 'active' : null} type="secondary"
+				>Patriarca</Button
+			>
+			<Button on:click={handleButtonFour} active={buttonFour ? 'active' : null} type="secondary"
+				>MO Rousseau</Button
+			>
+			<Button on:click={handleButtonFive} active={buttonFive ? 'active' : null} type="secondary"
+				>Vodafone</Button
+			>
 		</div>
 		<div class="px-8">
 			{#if buttonOne}
@@ -206,7 +226,7 @@
 		bottom: 0.775rem;
 		width: 0;
 		border-bottom: solid 1px #58e3c5;
-		animation: border_anim 0.4s forwards;
+		animation: border_anim 0.7s forwards;
 	}
 
 	@keyframes border_anim {

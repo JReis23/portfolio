@@ -1,8 +1,8 @@
 <script>
 	export let type = 'primary';
 	export let href = null;
-	export let autofocus = false;
 	export let blank = null;
+	export let active = null;
 </script>
 
 {#if href}
@@ -10,13 +10,18 @@
 		<slot />
 	</a>
 {:else}
-	<!-- svelte-ignore a11y-autofocus -->
-	<button class={type} on:click {autofocus}>
+	<button class="{type} {active}" on:click>
 		<slot />
 	</button>
 {/if}
 
 <style>
+	.active {
+		border-left: 3px solid #58e3c5 !important;
+		outline: none;
+		color: #58e3c5 !important;
+	}
+
 	.primary {
 		border: 1px solid #58e3c5;
 		color: #58e3c5;
@@ -42,12 +47,12 @@
 		border-left: solid 1px #8993b0;
 	}
 
-	.secondary:focus,
+	/* .secondary:focus,
 	.secondary:active {
 		border-left: 3px solid #58e3c5;
 		outline: none;
 		color: #58e3c5;
-	}
+	} */
 
 	.secondary:hover {
 		background: rgba(88, 227, 197, 0.1);

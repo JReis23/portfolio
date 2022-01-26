@@ -4,10 +4,15 @@
 	import WorkPlaces from '../components/index/WorkPlaces.svelte';
 	import Projects from '../components/index/Projects.svelte';
 	import Contact from '../components/index/Contact.svelte';
+	import Header from '../components/index/Header.svelte';
+	import Landing from '../components/index/Landing.svelte';
+	import Social from '../components/index/Social.svelte';
+
+	import { onMount } from 'svelte';
 </script>
 
 <div>
-	<main>
+	<main id="projects">
 		<Main />
 		<Moi />
 		<WorkPlaces />

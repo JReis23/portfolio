@@ -1,7 +1,10 @@
 <script>
-	import Button from '../../ui/Button.svelte';
 	import axios from 'axios';
+	import { fly } from 'svelte/transition';
+	import Button from '../../ui/Button.svelte';
 
+	let elementOnce;
+	let intersectOnce;
 	let name;
 	let email;
 	let reason;
@@ -28,7 +31,7 @@
 	}
 </script>
 
-<section class="contact">
+<section>
 	<h2 class="numbered-heading">Contactez-moi si vous avez des questions !</h2>
 	<form on:submit|preventDefault={handleSubmit}>
 		<div class="form-control">

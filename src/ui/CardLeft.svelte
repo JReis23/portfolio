@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte';
+
 	export let image = '';
 	export let title = '';
 	export let description = '';
@@ -6,9 +8,35 @@
 	export let githubLink = '';
 	export let link = '';
 	export let imageAlt = '';
+
+	let gsap;
+
+	let ScrollTrigger;
+	let box;
+
+	onMount(async () => {
+		const module = await import('gsap');
+		const kipp = await import('gsap/dist/ScrollTrigger');
+		gsap = module.default;
+		ScrollTrigger = kipp.default;
+		gsap.registerPlugin(ScrollTrigger);
+
+		console.log(ScrollTrigger);
+		gsap.from(box, {
+			scrollTrigger: {
+				trigger: box
+			},
+			y: 300,
+			x: 200,
+			duration: 1,
+			delay: 0.3,
+			opacity: 0,
+			ease: 'back'
+		});
+	});
 </script>
 
-<article class="card-left">
+<article class="card-left" bind:this={box}>
 	<div class="title items-start flex flex-col justify-center">
 		<h4>Featured Project</h4>
 		<h2>{title}</h2>

@@ -1,4 +1,8 @@
 <script>
+	// import { onMount } from 'svelte';
+	// import { gsap } from 'gsap';
+	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 	export let image = '';
 	export let title = '';
 	export let description = '';
@@ -6,6 +10,24 @@
 	export let githubLink = '';
 	export let link = '';
 	export let imageAlt = '';
+
+	// gsap.registerPlugin(ScrollTrigger);
+
+	// let box;
+
+	// onMount(async () => {
+	// 	await gsap.from(box, {
+	// 		scrollTrigger: {
+	// 			trigger: box
+	// 		},
+	// 		x: 200,
+	// 		y: 300,
+	// 		duration: 1,
+	// 		delay: 0.3,
+	// 		opacity: 0,
+	// 		ease: 'back'
+	// 	});
+	// });
 </script>
 
 <article class="card-right">

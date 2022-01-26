@@ -28,6 +28,7 @@
     "prettier-plugin-svelte": "^2.4.0",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
+    "svelte-intersection-observer": "^0.10.0",
     "svelte-preprocess": "^4.9.4",
     "tailwindcss": "^3.0.15",
     "tslib": "^2.3.1",
@@ -37,6 +38,7 @@
   "dependencies": {
     "@sveltejs/adapter-node": "^1.0.0-next.66",
     "axios": "^0.25.0",
-    "daisyui": "^1.25.3"
+    "daisyui": "^1.25.3",
+    "gsap": "file:gsap-bonus.tgz"
   }
 }
