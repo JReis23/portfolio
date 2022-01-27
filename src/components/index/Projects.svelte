@@ -10,7 +10,7 @@
 	});
 </script>
 
-<section>
+<section id="projets">
 	<h2 class="numbered-heading">Les projets que j'ai réalisé</h2>
 
 	{#each projects as project, i}

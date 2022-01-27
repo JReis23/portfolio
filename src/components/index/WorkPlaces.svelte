@@ -1,21 +1,11 @@
 <script>
 	import Button from '../../ui/Button.svelte';
-	import { onMount } from 'svelte';
 
 	let buttonOne = true;
 	let buttonTwo = false;
 	let buttonThree = false;
 	let buttonFour = false;
 	let buttonFive = false;
-	let active;
-
-	// const maybeyes = () => {
-	// 	if (!buttonOne) {
-	// 		active = '';
-	// 	} else {
-	// 		active = '';
-	// 	}
-	// };
 
 	const handleButtonOne = () => {
 		buttonOne = true;
@@ -58,7 +48,7 @@
 	};
 </script>
 
-<section>
+<section id="experience">
 	<h2 class="numbered-heading">Où j'ai travaillé</h2>
 	<div class="flex">
 		<div class="buttons flex flex-col self-center">
@@ -201,7 +191,7 @@
 		text-decoration: none;
 		position: relative;
 		font-size: 1.7rem;
-		color: #58e3c5;
+		color: #64ffda;
 		font-family: Calibre Regular;
 	}
 
@@ -225,7 +215,7 @@
 		left: 0;
 		bottom: 0.775rem;
 		width: 0;
-		border-bottom: solid 1px #58e3c5;
+		border-bottom: solid 1px #64ffda;
 		animation: border_anim 0.7s forwards;
 	}
 

@@ -4,40 +4,34 @@
 
 	let intro;
 
-	onMount(() => {
+	setTimeout(() => {
 		intro = true;
-	});
+	}, 0);
 </script>
 
-<div class="body">
+<div class="body" transition:fade={{ duration: 3000 }}>
 	{#if intro}
-		<div class="name">
-			<div>
-				<p in:fly={{ y: 150, duration: 2000 }} out:fade={{ duration: 1000 }}>J</p>
-			</div>
-			<div>
-				<p in:fly={{ y: -150, duration: 2000 }} out:fade={{ duration: 1000 }}>R</p>
-			</div>
-		</div>
+		<p in:fly={{ y: 150, duration: 2000 }} out:fade={{ duration: 1500 }}>J</p>
+
+		<p in:fly={{ y: -150, duration: 2000 }} out:fade={{ duration: 1500 }}>R</p>
 	{/if}
 </div>
 
 <style>
 	.body {
-		width: 98vw;
+		width: 100vw;
 		height: 100vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.name {
-		display: flex;
-		flex-direction: row;
+		position: absolute;
+		z-index: 1001;
+		background: #030d1b;
+		overflow: hidden;
 	}
 
 	p {
 		font-size: 200px;
-		color: #58e3c5;
+		color: #64ffda;
 	}
 </style>

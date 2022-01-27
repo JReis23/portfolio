@@ -3,28 +3,29 @@
 	export let href = null;
 	export let blank = null;
 	export let active = null;
+	export let rel = null;
 </script>
 
 {#if href}
-	<a {href} class={type} target={blank}>
+	<a {href} on:click|preventDefault class={type} {rel} target={blank}>
 		<slot />
 	</a>
 {:else}
-	<button class="{type} {active}" on:click>
+	<button class="{type} {active} " on:click>
 		<slot />
 	</button>
 {/if}
 
 <style>
 	.active {
-		border-left: 3px solid #58e3c5 !important;
+		border-left: 3px solid #64ffda !important;
 		outline: none;
-		color: #58e3c5 !important;
+		color: #64ffda !important;
 	}
 
 	.primary {
-		border: 1px solid #58e3c5;
-		color: #58e3c5;
+		border: 1px solid #64ffda;
+		color: #64ffda;
 		display: flex;
 		align-items: center;
 		border-radius: 3px;
@@ -35,6 +36,22 @@
 	}
 
 	.primary:hover {
+		background: rgba(88, 227, 197, 0.1);
+	}
+
+	.primary-main {
+		border: 1px solid #64ffda;
+		color: #64ffda;
+		display: flex;
+		align-items: center;
+		border-radius: 3px;
+		padding: 1rem 1.2rem;
+		font-size: 0.875rem;
+		transition: all 0.3s ease-in-out;
+		width: fit-content;
+	}
+
+	.primary-main:hover {
 		background: rgba(88, 227, 197, 0.1);
 	}
 
@@ -49,9 +66,9 @@
 
 	/* .secondary:focus,
 	.secondary:active {
-		border-left: 3px solid #58e3c5;
+		border-left: 3px solid #64ffda;
 		outline: none;
-		color: #58e3c5;
+		color: #64ffda;
 	} */
 
 	.secondary:hover {
@@ -59,8 +76,8 @@
 	}
 
 	.submit {
-		border: 1px solid #58e3c5;
-		color: #58e3c5;
+		border: 1px solid #64ffda;
+		color: #64ffda;
 		display: flex;
 		align-items: center;
 		border-radius: 3px;

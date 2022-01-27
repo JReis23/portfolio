@@ -1,7 +1,22 @@
 <script>
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+
+	onMount(() => {
+		const tl = gsap.timeline();
+		tl.from('.photo', {
+			scrollTrigger: {
+				trigger: '.photo',
+				start: 'center center',
+				end: 'top 5%',
+				pin: true,
+				scrub: 1
+			}
+		});
+	});
 </script>
 
-<section>
+<section id="me">
 	<h2 class="numbered-heading">Moi</h2>
 	<article class="flex">
 		<div>
@@ -28,7 +43,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="p-6">
+		<div class="photo">
 			<picture class="relative inline-block">
 				<img src="../static/img/me.jpg" alt="joao reis" />
 			</picture>
@@ -79,7 +94,7 @@
 
 	picture::before {
 		content: '';
-		border: 1px solid #58e3c5;
+		border: 1px solid #64ffda;
 		position: absolute;
 		top: 10px;
 		left: 10px;

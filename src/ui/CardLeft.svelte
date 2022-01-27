@@ -1,5 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 	export let image = '';
 	export let title = '';
@@ -9,29 +11,21 @@
 	export let link = '';
 	export let imageAlt = '';
 
-	let gsap;
+	gsap.registerPlugin(ScrollTrigger);
 
-	let ScrollTrigger;
 	let box;
 
-	onMount(async () => {
-		const module = await import('gsap');
-		const kipp = await import('gsap/dist/ScrollTrigger');
-		gsap = module.default;
-		ScrollTrigger = kipp.default;
-		gsap.registerPlugin(ScrollTrigger);
-
-		console.log(ScrollTrigger);
+	onMount(() => {
 		gsap.from(box, {
 			scrollTrigger: {
 				trigger: box
 			},
-			y: 300,
-			x: 200,
-			duration: 1,
-			delay: 0.3,
+			y: 100,
+			x: 50,
+			duration: 1.6,
+			delay: 0.6,
 			opacity: 0,
-			ease: 'back'
+			ease: 'slow'
 		});
 	});
 </script>
@@ -198,7 +192,7 @@
 
 	.box {
 		grid-area: box;
-		background: #102241;
+		background: #112240;
 		border-radius: 5px;
 		padding: 0 1rem;
 		z-index: 1;
@@ -225,6 +219,6 @@
 	}
 
 	svg:hover {
-		fill: #58e3c5;
+		fill: #64ffda;
 	}
 </style>

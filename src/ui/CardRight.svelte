@@ -1,7 +1,7 @@
 <script>
-	// import { onMount } from 'svelte';
-	// import { gsap } from 'gsap';
-	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 	export let image = '';
 	export let title = '';
@@ -11,26 +11,26 @@
 	export let link = '';
 	export let imageAlt = '';
 
-	// gsap.registerPlugin(ScrollTrigger);
+	gsap.registerPlugin(ScrollTrigger);
 
-	// let box;
+	let box;
 
-	// onMount(async () => {
-	// 	await gsap.from(box, {
-	// 		scrollTrigger: {
-	// 			trigger: box
-	// 		},
-	// 		x: 200,
-	// 		y: 300,
-	// 		duration: 1,
-	// 		delay: 0.3,
-	// 		opacity: 0,
-	// 		ease: 'back'
-	// 	});
-	// });
+	onMount(() => {
+		gsap.from(box, {
+			scrollTrigger: {
+				trigger: box
+			},
+			y: 100,
+			x: -50,
+			duration: 1.6,
+			delay: 0.6,
+			opacity: 0,
+			ease: 'slow'
+		});
+	});
 </script>
 
-<article class="card-right">
+<article class="card-right" bind:this={box}>
 	<a href={link} target="_blank" class="img-right shadow-xl">
 		<img src={image} alt={imageAlt} />
 	</a>
@@ -193,7 +193,7 @@ l9.6,4.8L54.6,48.1z"
 
 	.box {
 		grid-area: box;
-		background: #102241;
+		background: #112240;
 		border-radius: 5px;
 		padding: 0 1rem;
 		z-index: 1;
@@ -220,6 +220,6 @@ l9.6,4.8L54.6,48.1z"
 	}
 
 	svg:hover {
-		fill: #58e3c5;
+		fill: #64ffda;
 	}
 </style>

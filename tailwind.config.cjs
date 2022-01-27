@@ -5,7 +5,7 @@ module.exports = {
 		colors: {
 			transparent: 'transparent',
 			current: 'currentColor',
-			'green-astral': '#58e3c5'
+			'green-astral': '#64ffda'
 		}
 	},
 	plugins: [require('daisyui')],

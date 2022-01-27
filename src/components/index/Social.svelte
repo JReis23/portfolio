@@ -1,6 +1,30 @@
+<script>
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	let box;
+
+	onMount(() => {
+		gsap.from('.social-link', {
+			scrollTrigger: {
+				trigger: '.social-link'
+			},
+			y: 150,
+			duration: 1.6,
+			delay: 6,
+			opacity: 0,
+			ease: 'back',
+			stagger: 0.5
+		});
+	});
+</script>
+
 <div class="social fixed bottom-0">
 	<ul>
-		<li>
+		<li class="social-link">
 			<a href="/">
 				<svg
 					fill="#000000"
@@ -27,7 +51,7 @@
 				</svg>
 			</a>
 		</li>
-		<li>
+		<li class="social-link">
 			<a href="/">
 				<svg
 					fill="#000000"
@@ -70,7 +94,7 @@
 				</svg>
 			</a>
 		</li>
-		<li>
+		<li class="social-link">
 			<a href="/">
 				<svg
 					fill="#000000"
@@ -96,7 +120,7 @@
 				</svg>
 			</a>
 		</li>
-		<li>
+		<li class="social-link">
 			<a href="/">
 				<svg
 					fill="#000000"
@@ -137,7 +161,7 @@
 
 	a:hover {
 		transform: translateY(-5px);
-		color: #58e3c5;
+		color: #64ffda;
 	}
 
 	svg {
@@ -146,6 +170,6 @@
 	}
 
 	svg:hover {
-		fill: #58e3c5;
+		fill: #64ffda;
 	}
 </style>
