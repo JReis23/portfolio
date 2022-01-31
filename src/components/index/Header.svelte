@@ -46,7 +46,7 @@
 					<Button
 						rel="external"
 						href="https://drive.google.com/uc?id=1rHdIcz03FiWetX8JjRCwvVnfiVIvrbfR"
-						blank="_blank">Curriculum</Button
+						target="_blank">Curriculum</Button
 					>
 				</div>
 			</div>

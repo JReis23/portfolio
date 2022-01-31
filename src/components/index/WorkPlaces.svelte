@@ -74,21 +74,18 @@
 					<h3>
 						Stagiaire <span>@ <a href="http://www.patriarca.fr" target="_blank">Montauban</a></span>
 					</h3>
-					<p>Janvier 2019 à Mars 2020</p>
+					<p>Février 2021 à Mars 2021</p>
 				</div>
 				<ul>
 					<li>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-						laudantium,
+						Création d'une application pour gestion de processes de la création du client à la
+						facturation.
 					</li>
 					<li>
-						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-						beatae vitae dicta
+						Application créé en Django est en suite gérée par un admin et plusieurs utlisateurs avec
+						des différents rôles.
 					</li>
-					<li>
-						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-						consequuntur.
-					</li>
+					<li>Élaboration du projet avec la méthodologie <span>Scrum Agile</span></li>
 				</ul>
 			{:else if buttonTwo}
 				<div class="py-6">
@@ -96,21 +93,16 @@
 						Apprenant <span
 							>@ <a href="http://www.patriarca.fr" target="_blank">Rural Web Factory</a></span
 						>
+						by <span><a href="https://simplon.co/" target="_blank">Simplon</a></span>
 					</h3>
-					<p>Janvier 2019 à Mars 2020</p>
+					<p>Octobre 2020 à Juillet 2021</p>
 				</div>
 				<ul>
+					<li>Apprentissage de langages de base comme JavaScript, HTML et CSS.</li>
+					<li>Conception de bases de données. Apprentissage MCD et MLD.</li>
 					<li>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-						laudantium,
-					</li>
-					<li>
-						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-						beatae vitae dicta
-					</li>
-					<li>
-						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-						consequuntur.
+						Réalisation de plusieurs projets pour améliorer la connaissance générale du métier de
+						développeur
 					</li>
 				</ul>
 			{:else if buttonThree}
@@ -124,60 +116,54 @@
 				</div>
 				<ul>
 					<li>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-						laudantium,
+						Coordonner les travaux réalisés dans le cadre d’un ou plusieurs chantiers dans le
+						respect de la qualité, des délais et du budget.
 					</li>
 					<li>
-						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-						beatae vitae dicta
+						Suivi technique, administratif et financier du chantier ainsi que des entreprises
+						sous-traitantes.
 					</li>
 					<li>
-						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-						consequuntur.
+						Etude du dossier et des contrats, préparation de l'opération, définition des besoins,
+						méthodes, moyens humains et matériels, planification de l'opération
 					</li>
 				</ul>
 			{:else if buttonFour}
 				<div class="py-6">
 					<h3>
-						Conducteur de travaux <span>@ <a href="http://www.patriarca.fr">MO Rousseau</a></span>
+						Conducteur de travaux <span>@ <a href="/">MO Rousseau</a></span>
 					</h3>
-					<p>Janvier 2019 à Mars 2020</p>
+					<p>Octobre 2017 à Décembre 2018</p>
 				</div>
 				<ul>
 					<li>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-						laudantium,
+						Coordonner les travaux réalisés dans le cadre d’un ou plusieurs chantiers dans le
+						respect de la qualité, des délais et du budget.
 					</li>
 					<li>
-						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-						beatae vitae dicta
+						Suivi technique, administratif et financier du chantier ainsi que des entreprises
+						sous-traitantes.
 					</li>
 					<li>
-						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-						consequuntur.
+						Etude du dossier et des contrats, préparation de l'opération, définition des besoins,
+						méthodes, moyens humains et matériels, planification de l'opération
 					</li>
 				</ul>
 			{:else if buttonFive}
 				<div class="py-6">
 					<h3>
 						Conducteur de travaux <span
-							>@ <a href="http://www.patriarca.fr" target="_blank">Vodafone Portugal</a></span
+							>@ <a href="https://www.vodafone.pt/" target="_blank">Vodafone Portugal</a></span
 						>
 					</h3>
-					<p>Janvier 2019 à Mars 2020</p>
+					<p>Janvier 2007 à Janvier 2010</p>
 				</div>
 				<ul>
+					<li>Contribuer au bon déroulement des différentes tâches de BackOffice</li>
+					<li>Gérer les plaintes formulées par les clients.</li>
 					<li>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-						laudantium,
-					</li>
-					<li>
-						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-						beatae vitae dicta
-					</li>
-					<li>
-						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-						consequuntur.
+						Trouver des solutions pour parvenir à un bon compromis entre le client et l'entreprise
+						dans la gestion de la plainte.
 					</li>
 				</ul>
 			{/if}
@@ -217,6 +203,11 @@
 		width: 0;
 		border-bottom: solid 1px #64ffda;
 		animation: border_anim 0.7s forwards;
+	}
+
+	p {
+		font-family: Fira Code Light;
+		font-size: 0.775rem;
 	}
 
 	@keyframes border_anim {

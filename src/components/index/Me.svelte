@@ -22,10 +22,21 @@
 		<div>
 			<div class="about">
 				<p>
-					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-					laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-					architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-					aspernatur aut odit aut fugit, sed quia consequuntur.
+					Bonjour, je m'appelle Joao et mon intérêt pour le développement web a commencé en 2020,
+					lorsque j'ai décidé que c'était le bon moment pour changer de métier et essayer de
+					réaliser mon rêve de travailler dans le développement d'applications web !<br /><br
+					/>Avant d'être développeur web, j'ai été conducteur de travaux dans bâtiment et j'ai aussi
+					travaillé dans le back-office d'une autre entreprise dans le domaine des communications.
+					Les métiers que j'ai exercées ont fait de moi un professionnel ayant de l'expérience dans
+					la gestion des clients et des équipes.
+					<br /><br />Ma formation de développeur Web a eu lieu entre novembre 2020 et juillet 2021.
+					Pendant la formation, j'ai appris à travailler avec des langages comme
+					<span>JavaScript, HTML, CSS, SQL et Python</span> et peu après la formation, j'ai commencé
+					à travailler avec <span>React</span> et surtout <span>SVELTE</span> (utilisé pour la
+					réalisation du portfolio). Au cours de ma formation, j'ai également suivi une formation
+					<span>Opquast</span>
+					et une formation <span>Agile</span>. <br /><br />Voici quelques technologies avec
+					lesquelles j'ai travaillé récemment :
 				</p>
 			</div>
 			<div class="flex flex-row">
@@ -54,6 +65,7 @@
 <style>
 	.about {
 		max-width: 75ch;
+		padding-right: 2rem;
 	}
 
 	li::before {
@@ -61,6 +73,10 @@
 		color: rgba(88, 227, 197, 1);
 		margin-right: 1.175rem;
 	}
+
+	/* p {
+		line-height: 2;
+	} */
 
 	ul {
 		padding-right: 5rem;

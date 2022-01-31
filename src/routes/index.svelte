@@ -20,7 +20,7 @@
 		<Landing />
 	</div>
 {:else}
-	<div in:fade={{ delay: 2000, duration: 1500 }}>
+	<div in:fade={{ delay: 2000, duration: 1000 }}>
 		<main id="projects">
 			<Main />
 			<Me />

@@ -5,10 +5,8 @@
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	let box;
-
 	onMount(() => {
-		gsap.from('.social-link', {
+		gsap.from('.social-link ', {
 			scrollTrigger: {
 				trigger: '.social-link'
 			},
@@ -24,8 +22,8 @@
 
 <div class="social fixed bottom-0">
 	<ul>
-		<li class="social-link">
-			<a href="/">
+		<li class="social-link ">
+			<a href="https://github.com/JReis23" target="_blank" class="hover:shadow-xl">
 				<svg
 					fill="#000000"
 					width="52"
@@ -51,8 +49,12 @@
 				</svg>
 			</a>
 		</li>
-		<li class="social-link">
-			<a href="/">
+		<li class="social-link hover:shadow-xl">
+			<a
+				href="https://www.linkedin.com/in/joao-reis-54199b177/"
+				target="_blank"
+				class="hover:shadow-xl"
+			>
 				<svg
 					fill="#000000"
 					width="52"
@@ -94,8 +96,8 @@
 				</svg>
 			</a>
 		</li>
-		<li class="social-link">
-			<a href="/">
+		<li class="social-link hover:shadow-xl">
+			<a href="https://twitter.com/ego2323" target="_blank" class="hover:shadow-xl">
 				<svg
 					fill="#000000"
 					width="52"
@@ -120,8 +122,8 @@
 				</svg>
 			</a>
 		</li>
-		<li class="social-link">
-			<a href="/">
+		<li class="social-link hover:shadow-xl">
+			<a href="https://www.facebook.com/joao.reis.5832" target="_blank" class="hover:shadow-xl">
 				<svg
 					fill="#000000"
 					width="52"

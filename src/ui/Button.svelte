@@ -1,13 +1,13 @@
 <script>
 	export let type = 'primary';
 	export let href = null;
-	export let blank = null;
 	export let active = null;
 	export let rel = null;
+	export let target = null;
 </script>
 
 {#if href}
-	<a {href} on:click|preventDefault class={type} {rel} target={blank}>
+	<a {href} class={type} {rel} {target}>
 		<slot />
 	</a>
 {:else}
@@ -58,10 +58,11 @@
 	.secondary {
 		color: #8993b0;
 		font-family: Fira Code Light;
-		padding: 0.25rem 0.9rem;
+		padding: 0.5rem 0.9rem;
 		text-align: center;
 		width: fit-content;
 		border-left: solid 1px #8993b0;
+		font-size: 0.875rem;
 	}
 
 	/* .secondary:focus,

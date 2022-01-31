@@ -18,16 +18,18 @@
 	<h2>João Reis,</h2>
 	<h3>et je suis développeur Web.</h3>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-		laboris nisi ut aliquip ex ea commodo consequat.
+		Je suis un développeur web spécialisé dans la création du front-end de tout site web et je suis
+		également capable de créer des applications back-end à intégrer avec les solutions front-end que
+		je crée. Après avoir obtenu mon diplôme, <span
+			>je suis maintenant à la recherche d'un poste de développeur Web.</span
+		>
 	</p>
 
 	<div class="button-main mt-16">
 		<Button
 			rel="external"
 			href="https://drive.google.com/uc?id=1rHdIcz03FiWetX8JjRCwvVnfiVIvrbfR"
-			blank="_blank"
+			target="_blank"
 			type="primary-main">Regardez mon Curriculum !</Button
 		>
 	</div>

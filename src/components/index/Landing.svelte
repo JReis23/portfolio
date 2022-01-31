@@ -1,6 +1,6 @@
 <script>
-	import { fly, fade } from 'svelte/transition';
-	import { onMount } from 'svelte';
+	import { fly, fade, scale } from 'svelte/transition';
+	import { quartOut, quintOut } from 'svelte/easing';
 
 	let intro;
 
@@ -9,11 +9,21 @@
 	}, 0);
 </script>
 
-<div class="body" transition:fade={{ duration: 3000 }}>
+<div class="body">
 	{#if intro}
-		<p in:fly={{ y: 150, duration: 2000 }} out:fade={{ duration: 1500 }}>J</p>
+		<p
+			in:fly={{ y: 150, duration: 2000 }}
+			out:scale={{ duration: 1000, delay: 500, opacity: 0, start: 0, easing: quartOut }}
+		>
+			J
+		</p>
 
-		<p in:fly={{ y: -150, duration: 2000 }} out:fade={{ duration: 1500 }}>R</p>
+		<p
+			in:fly={{ y: -150, duration: 2000 }}
+			out:scale={{ duration: 1000, delay: 500, opacity: 0, start: 0, easing: quartOut }}
+		>
+			R
+		</p>
 	{/if}
 </div>
 
