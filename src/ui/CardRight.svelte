@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
 
 	export let image = '';
 	export let title = '';
