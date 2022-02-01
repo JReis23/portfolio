@@ -168,7 +168,7 @@
 
 	svg {
 		fill: #8993b0;
-		width: 1.7rem;
+		width: 1.5rem;
 	}
 
 	svg:hover {

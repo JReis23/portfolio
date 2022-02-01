@@ -80,8 +80,8 @@
 	<section id="contact">
 		<h2 class="numbered-heading">Contactez-moi si vous avez des questions !</h2>
 		<div class="flex flex-col items-center">
-			<article class="max-w-screen-sm mx-auto p-10">
-				<p class="text-center">
+			<article>
+				<p class="">
 					Je suis actuellement à la recherche de nouvelles opportunités. Que vous ayez une question
 					ou que vous souhaitiez simplement me saluer, je ferai de mon mieux pour vous répondre !
 				</p>
@@ -150,8 +150,13 @@
 		font-size: 1.1rem;
 	}
 
+	article {
+		width: clamp(400px, 48vw, 1000px);
+		padding: 3rem 0;
+	}
+
 	form {
-		width: clamp(400px, 45vw, 1000px);
+		width: clamp(400px, 48vw, 1000px);
 	}
 
 	input {
