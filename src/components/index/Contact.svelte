@@ -41,7 +41,7 @@
 
 		if (valid) {
 			try {
-				const response = await fetch('http://api.jreis.org', {
+				const response = await fetch('https://api.jreis.org', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
