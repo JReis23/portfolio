@@ -73,7 +73,7 @@
 			</h5>
 		</div>
 		<div class="py-6">
-			<Button href="www.jreis.org" type="submit">Retour</Button>
+			<Button href="." type="submit">Retour</Button>
 		</div>
 	</Modal>
 {:else}
