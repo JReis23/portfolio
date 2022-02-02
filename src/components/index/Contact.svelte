@@ -41,7 +41,7 @@
 
 		if (valid) {
 			try {
-				const response = await fetch('http://localhost:1337/api/contacts', {
+				const response = await fetch('http://api.jreis.org', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
