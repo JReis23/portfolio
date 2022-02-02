@@ -74,16 +74,16 @@
 					<h3>
 						Stagiaire <span>@ <a href="http://www.patriarca.fr" target="_blank">Montauban</a></span>
 					</h3>
-					<p>Février 2021 à Mars 2021</p>
+					<p>février 2021 à mars 2021</p>
 				</div>
 				<ul>
 					<li>
-						Création d'une application pour gestion de processes de la création du client à la
-						facturation.
+						Création d'une application pour la gestion du processus de la création du client à la
+						facturation des dossiers clients.
 					</li>
 					<li>
-						Application créé en Django est en suite gérée par un admin et plusieurs utlisateurs avec
-						des différents rôles.
+						Application créée en Django et ensuite gérée par un administrateur et plusieurs
+						utlisateurs avec des différents rôles.
 					</li>
 					<li>Élaboration du projet avec la méthodologie <span>Scrum Agile</span></li>
 				</ul>
@@ -116,7 +116,7 @@
 				</div>
 				<ul>
 					<li>
-						Coordonner les travaux réalisés dans le cadre d’un ou plusieurs chantiers dans le
+						Coordination des travaux réalisés dans le cadre d’un ou plusieurs chantiers dans le
 						respect de la qualité, des délais et du budget.
 					</li>
 					<li>
@@ -159,11 +159,10 @@
 					<p>Janvier 2007 à Janvier 2010</p>
 				</div>
 				<ul>
-					<li>Contribuer au bon déroulement des différentes tâches de BackOffice</li>
-					<li>Gérer les plaintes formulées par les clients.</li>
+					<li>Contribution au bon déroulement des différentes tâches de back-office.</li>
+					<li>Gestion des plaintes formulées par les clients.</li>
 					<li>
-						Trouver des solutions pour parvenir à un bon compromis entre le client et l'entreprise
-						dans la gestion de la plainte.
+						Proposition de solutions dans le but d’optimiser le relationnel clientèle /entreprise.
 					</li>
 				</ul>
 			{/if}

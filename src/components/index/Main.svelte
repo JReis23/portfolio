@@ -15,12 +15,12 @@
 
 <section id="index">
 	<h1>Salut, je m'appelle,</h1>
-	<h2>João Reis,</h2>
-	<h3>et je suis développeur Web.</h3>
+	<h2>João Reis</h2>
+	<h3>je suis développeur Web.</h3>
 	<p>
-		Je suis un développeur web spécialisé dans la création du front-end de tout site web et je suis
-		également capable de créer des applications back-end à intégrer avec les solutions front-end que
-		je crée. Après avoir obtenu mon diplôme, <span
+		Je suis un développeur web spécialisé dans la création du front-end de tout site web, je
+		développe également des applications back-end à intégrer aux solutions front-end que je crée.
+		Après avoir obtenu mon diplôme, <span
 			>je suis maintenant à la recherche d'un poste de développeur Web.</span
 		>
 	</p>
@@ -30,8 +30,9 @@
 			rel="external"
 			href="https://drive.google.com/uc?id=1rHdIcz03FiWetX8JjRCwvVnfiVIvrbfR"
 			target="_blank"
-			type="primary-main">Regardez mon Curriculum !</Button
-		>
+			type="primary-main"
+			>Regardez mon CV !
+		</Button>
 	</div>
 </section>
 

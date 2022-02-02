@@ -7,12 +7,12 @@
 		<div>
 			<div class="about">
 				<p>
-					Bonjour, je m'appelle Joao et mon intérêt pour le développement web a commencé en 2020,
-					lorsque j'ai décidé que c'était le bon moment pour changer de métier et essayer de
+					Mon intérêt pour le développement web a commencé il y a quelques années. Mais c’est en
+					2020 que j'ai décidé que c'était le bon moment pour changer de métier et essayer de
 					réaliser mon rêve de travailler dans le développement d'applications web !<br /><br
-					/>Avant d'être développeur web, j'ai été conducteur de travaux dans bâtiment et j'ai aussi
-					travaillé dans le back-office d'une autre entreprise dans le domaine des communications.
-					Les métiers que j'ai exercées ont fait de moi un professionnel ayant de l'expérience dans
+					/>Avant d'être développeur web, j'ai été conducteur de travaux dans le bâtiment et j'ai
+					aussi travaillé pour le back-office d'une entreprise dans le domaine de la communication.
+					Les métiers que j'ai exercés ont fait de moi un professionnel ayant de l'expérience dans
 					la gestion des clients et des équipes.
 					<br /><br />Ma formation de développeur Web a eu lieu entre novembre 2020 et juillet 2021.
 					Pendant la formation, j'ai appris à travailler avec des langages comme
