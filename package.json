@@ -34,7 +34,6 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-node": "next",
-    "axios": "^0.25.0",
     "daisyui": "^1.25.3",
     "gsap": "file:gsap-bonus.tgz"
   }
