@@ -1,19 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-
-	onMount(() => {
-		const tl = gsap.timeline();
-		tl.from('.photo', {
-			scrollTrigger: {
-				trigger: '.photo',
-				start: 'center center',
-				end: 'top 5%',
-				pin: true,
-				scrub: 1
-			}
-		});
-	});
 </script>
 
 <section id="me">
@@ -56,7 +41,7 @@
 		</div>
 		<div class="photo">
 			<picture class="relative inline-block">
-				<img src="./static/img/me.jpg" alt="joao reis" />
+				<img src="/img/me.jpg" alt="joao reis" />
 			</picture>
 		</div>
 	</article>
