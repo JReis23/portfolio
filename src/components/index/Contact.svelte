@@ -7,15 +7,13 @@
 	let valid = false;
 	let error = null;
 	let showModal = true;
-	let withoutData = { name: '', email: '', reason: '' };
 
-	function scrollIntoView({ target }) {
-		const el = document.querySelector(target.getAttribute('href'));
-		if (!el) return;
-		el.scrollIntoView({
-			behavior: 'smooth'
-		});
-	}
+	const closeModal = () => {
+		showModal = false;
+		error = null;
+		data = { name: '', email: '', reason: '' };
+		return data;
+	};
 
 	const handleSubmit = async () => {
 		valid = true;
@@ -73,7 +71,7 @@
 			</h5>
 		</div>
 		<div class="py-6">
-			<Button href="." type="submit">Retour</Button>
+			<Button on:click={closeModal}>Retour</Button>
 		</div>
 	</Modal>
 {:else}
@@ -91,12 +89,7 @@
 					<label for="name" class="">
 						<span class="">Nom</span>
 					</label>
-					<input
-						type="text"
-						class={valid ? 'valid' : ''}
-						placeholder="Votre nom"
-						bind:value={data.name}
-					/>
+					<input type="text" placeholder="Votre nom" bind:value={data.name} />
 					<label for="name" class="">
 						<span class="label-text-alt invalid">{err.name}</span>
 					</label>

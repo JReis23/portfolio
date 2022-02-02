@@ -181,11 +181,6 @@
 		height: 100%;
 	}
 
-	/* a {
-		height: 100%;
-		width: 100%;
-	} */
-
 	.title {
 		grid-area: title;
 	}
@@ -200,7 +195,7 @@
 	}
 
 	.box:hover {
-		transform: translateY(-3px) translateX(-3px);
+		transform: translateY(-3px) translateX(3px);
 	}
 
 	.goto {

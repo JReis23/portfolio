@@ -1,4 +1,6 @@
 <script>
+	import { fly, scale } from 'svelte/transition';
+
 	function scrollToTop() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
@@ -8,9 +10,13 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="fixed bottom-0 right-0">
-	<ul>
-		{#if y > 300}
+{#if y > 100}
+	<div
+		class="fixed bottom-0 right-0"
+		in:fly={{ duration: 1000, y: 300, opacity: 0 }}
+		out:scale={{ duration: 1000 }}
+	>
+		<ul>
 			<button on:click={scrollToTop} class="shadow-2xl active:shadow-inner">
 				<svg
 					fill="#000000"
@@ -38,9 +44,9 @@
 					</g>
 				</svg>
 			</button>
-		{/if}
-	</ul>
-</div>
+		</ul>
+	</div>
+{/if}
 
 <style>
 	button {

@@ -156,15 +156,8 @@ l9.6,4.8L54.6,48.1z"
 		border-radius: 5px;
 		position: relative;
 		display: inline-block;
-		z-index: 1;
-		filter: grayscale(1);
 	}
-
-	.img-right:hover {
-		filter: none;
-	}
-
-	img::after {
+	.img-right::after {
 		content: '';
 		background: rgba(88, 227, 197, 0.3);
 		position: absolute;
@@ -174,39 +167,28 @@ l9.6,4.8L54.6,48.1z"
 		bottom: 0;
 		transition: 0.5s ease-in-out;
 		border-radius: 5px;
-		filter: none;
-		z-index: 30;
 	}
-
-	.img-right:hover::before {
+	.img-right:hover::after {
 		background: none;
 		transition: 0.5s ease-in-out;
-		filter: none;
 	}
-
 	img {
-		grid-area: img-right;
-		grid-row: 1/4;
-		grid-column: 1/8;
-		transition: 0.5s ease-in-out;
-		border-radius: 5px;
-		position: relative;
-		display: inline-block;
-		z-index: 1;
 		border-radius: 5px;
 		display: block;
 		object-fit: fill;
 		width: 100%;
 		height: 100%;
 	}
-
+	/* a {
+		height: 100%;
+		width: 100%;
+	} */
 	.title {
 		grid-area: title;
 	}
-
 	.box {
 		grid-area: box;
-		background: #112240;
+		background: #102241;
 		border-radius: 5px;
 		padding: 0 1rem;
 		z-index: 1;

@@ -27,7 +27,7 @@
 	<header>
 		<nav class="w-full flex justify-between items-center">
 			<div class="logo">
-				<img src="../static/img/vectorpaint.svg" alt="" />
+				<img src="../img/vectorpaint.svg" alt="" />
 			</div>
 			<div class="flex">
 				<ol class="flex flex-row items-center">
