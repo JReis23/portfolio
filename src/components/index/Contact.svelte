@@ -80,8 +80,9 @@
 		<div class="flex flex-col items-center">
 			<article>
 				<p class="">
-					Je suis actuellement à la recherche de nouvelles opportunités. Que vous ayez une question
-					ou que vous souhaitiez simplement me saluer, je ferai de mon mieux pour vous répondre !
+					<span>Je suis actuellement à la recherche de nouvelles opportunités</span>. Que vous ayez
+					une question ou que vous souhaitiez simplement me saluer, je ferai de mon mieux pour vous
+					répondre !
 				</p>
 			</article>
 			<form on:submit|preventDefault={handleSubmit} id="myForm">
