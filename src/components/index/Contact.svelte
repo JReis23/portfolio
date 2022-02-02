@@ -68,7 +68,7 @@
 	<Modal {showModal}>
 		<div class="error justify-center flex">
 			<h5>
-				Il à un probleme 😅<br /> Envoyez un mail à
+				Il à eu un problème pendant l'envoi de votre formulaire 😅<br /> Envoyez un mail à
 				<a href="mailto:{error.message}">{error.message}</a>
 			</h5>
 		</div>

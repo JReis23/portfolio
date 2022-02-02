@@ -56,7 +56,7 @@
 		</div>
 		<div class="photo">
 			<picture class="relative inline-block">
-				<img src="../static/img/me.jpg" alt="joao reis" />
+				<img src="./static/img/me.jpg" alt="joao reis" />
 			</picture>
 		</div>
 	</article>
