@@ -73,7 +73,7 @@
 			</h5>
 		</div>
 		<div class="py-6">
-			<Button href="/" type="submit" on:click={scrollIntoView}>Retour</Button>
+			<Button href="www.jreis.org" type="submit">Retour</Button>
 		</div>
 	</Modal>
 {:else}
