@@ -41,7 +41,7 @@
 
 		if (valid) {
 			try {
-				const response = await fetch('https://api.jreis.org', {
+				const response = await fetch('https://api.jreis.org/api/contacts', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
@@ -194,10 +194,6 @@
 		width: 0;
 		border-bottom: solid 1px #64ffda;
 		animation: border_anim 0.7s forwards;
-	}
-
-	.valid {
-		color: green;
 	}
 
 	.invalid {
