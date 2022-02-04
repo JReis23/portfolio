@@ -16,16 +16,37 @@
 	let box;
 
 	onMount(() => {
-		gsap.from(box, {
-			scrollTrigger: {
-				trigger: box
+		ScrollTrigger.matchMedia({
+			'(min-width: 800px)': function () {
+				let tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: box
+					}
+				});
+				tl.from(box, {
+					y: 100,
+					x: 50,
+					duration: 1.6,
+					delay: 0.6,
+					opacity: 0,
+					ease: 'slow'
+				});
 			},
-			y: 100,
-			x: 50,
-			duration: 1.6,
-			delay: 0.6,
-			opacity: 0,
-			ease: 'slow'
+			'(max-width: 799px)': function () {
+				let tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: box
+					}
+				});
+				tl.from(box, {
+					y: 0,
+					x: 0,
+					duration: 1.6,
+					delay: 0.6,
+					opacity: 0,
+					ease: 'slow'
+				});
+			}
 		});
 	});
 </script>
@@ -195,7 +216,7 @@
 	}
 
 	.box:hover {
-		transform: translateY(-3px) translateX(3px);
+		transform: translateY(-3px) translateX(-3px);
 	}
 
 	.goto {

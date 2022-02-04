@@ -145,12 +145,12 @@
 	}
 
 	article {
-		width: clamp(400px, 48vw, 1000px);
+		width: clamp(360px, 48vw, 1000px);
 		padding: 3rem 0;
 	}
 
 	form {
-		width: clamp(400px, 48vw, 1000px);
+		width: clamp(360px, 48vw, 1000px);
 	}
 
 	input {
