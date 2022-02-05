@@ -12,7 +12,7 @@
 			},
 			y: 150,
 			duration: 1.6,
-			delay: 6,
+			delay: 0, //trocar para 6
 			opacity: 0,
 			ease: 'back',
 			stagger: 0.5
@@ -20,7 +20,7 @@
 	});
 </script>
 
-<div class="social fixed bottom-0">
+<div class="social fixed bottom-0 left-0">
 	<ul>
 		<li class="social-link ">
 			<a href="https://github.com/JReis23" target="_blank" class="hover:shadow-xl">
@@ -173,5 +173,11 @@
 
 	svg:hover {
 		fill: #64ffda;
+	}
+
+	@media (max-width: 768px) {
+		.social {
+			display: none;
+		}
 	}
 </style>

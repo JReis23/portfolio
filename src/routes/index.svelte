@@ -4,9 +4,10 @@
 	import WorkPlaces from '../components/index/WorkPlaces.svelte';
 	import Projects from '../components/index/Projects.svelte';
 	import Contact from '../components/index/Contact.svelte';
+	import Social from '../components/index/Social.svelte';
 	import Landing from '../components/index/Landing.svelte';
-
 	import { fade } from 'svelte/transition';
+	import Slide from '../ui/Slide.svelte';
 
 	let render;
 	setTimeout(() => {
@@ -22,11 +23,13 @@
 {:else}
 	<div in:fade={{ delay: 2000, duration: 1000 }}>
 		<main id="projects">
+			<Slide />
 			<Main />
 			<Me />
 			<WorkPlaces />
 			<Projects />
 			<Contact />
+			<Social />
 		</main>
 	</div>
 {/if}
