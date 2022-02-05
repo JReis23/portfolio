@@ -1,8 +1,6 @@
 <script>
 	import Button from '../../ui/Button.svelte';
 	import { openNav } from '../../stores/OpenNav';
-	import { fly } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 
@@ -34,7 +32,7 @@
 	<header>
 		<nav class="w-full flex justify-between items-center">
 			<div class="logo">
-				<img src="../static/img/vectorpaint.svg" alt="logo joao reis" />
+				<img src="../../img/vectorpaint.svg" alt="logo joao reis" />
 			</div>
 			<div class="flex" on:click|preventDefault={handle}>
 				<div class="flex visible md:invisible justify-end">

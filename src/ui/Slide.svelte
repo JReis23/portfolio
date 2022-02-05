@@ -3,7 +3,6 @@
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { openNav } from '../stores/OpenNav';
-	import Social from '../components/index/Social.svelte';
 
 	export function scrollIntoView({ target }) {
 		const el = document.querySelector(target.getAttribute('href'));
