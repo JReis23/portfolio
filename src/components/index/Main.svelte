@@ -65,4 +65,7 @@
 	p {
 		max-width: 530px;
 	}
+
+	@media (max-width: 768px) {
+	}
 </style>

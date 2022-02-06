@@ -92,4 +92,17 @@
 	.submit:hover {
 		background: rgba(88, 227, 197, 0.1);
 	}
+
+	@media (max-width: 768px) {
+		.active {
+			border-bottom: 3px solid #64ffda !important;
+			border-left: none !important;
+			outline: none;
+			color: #64ffda !important;
+		}
+		.secondary {
+			padding: 0.3rem 0.3rem;
+			border-left: none;
+		}
+	}
 </style>

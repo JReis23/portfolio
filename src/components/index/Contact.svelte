@@ -76,7 +76,7 @@
 	</Modal>
 {:else}
 	<section id="contact">
-		<h2 class="numbered-heading">Contactez-moi si vous avez des questions !</h2>
+		<h2 class="numbered-heading">Contactez-moi !</h2>
 		<div class="flex flex-col items-center">
 			<article>
 				<p class="">

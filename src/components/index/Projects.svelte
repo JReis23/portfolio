@@ -11,7 +11,7 @@
 </script>
 
 <section id="projets">
-	<h2 class="numbered-heading">Les projets que j'ai réalisé</h2>
+	<h2 class="numbered-heading">Mes projets !</h2>
 
 	{#each projects as project, i}
 		{#if i % 2 == 0}

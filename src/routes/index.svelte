@@ -49,4 +49,10 @@
 		display: flex;
 		flex-direction: column;
 	}
+
+	@media (max-width: 768px) {
+		main {
+			padding: 0 1rem;
+		}
+	}
 </style>

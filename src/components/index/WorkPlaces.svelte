@@ -50,8 +50,8 @@
 
 <section id="experience">
 	<h2 class="numbered-heading">Où j'ai travaillé</h2>
-	<div class="flex">
-		<div class="buttons flex flex-col self-center">
+	<div class="flex flex-col md:flex-row">
+		<div class="buttons flex flex-row md:flex-col self-center">
 			<Button on:click={handleButtonOne} active={buttonOne ? 'active' : null} type="secondary"
 				>Montauban</Button
 			>
@@ -68,7 +68,7 @@
 				>Vodafone</Button
 			>
 		</div>
-		<div class="px-8">
+		<div class="md:px-8 ">
 			{#if buttonOne}
 				<div class="py-6">
 					<h3>
@@ -183,7 +183,7 @@
 	li {
 		color: #8993b0;
 		font-family: Calibre Regular;
-		width: 50ch;
+		max-width: 50ch;
 		font-size: 1.175em;
 		padding: auto;
 	}
@@ -215,6 +215,17 @@
 		}
 		100% {
 			width: 100%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		li {
+			padding: 0.375rem 1rem;
+		}
+
+		.buttons {
+			width: calc(100% + 100px);
+			overflow-x: auto;
 		}
 	}
 </style>

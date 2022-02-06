@@ -3,7 +3,7 @@
 
 <section id="me">
 	<h2 class="numbered-heading">Moi</h2>
-	<article class="flex">
+	<article class="flex flex-col md:flex-row">
 		<div>
 			<div class="about">
 				<p>
@@ -121,5 +121,18 @@
 		background: none;
 		transition: 0.5s ease-in-out;
 		transform: translateY(-3px);
+	}
+
+	@media (max-width: 768px) {
+		.photo {
+			display: none;
+		}
+
+		ul {
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+			padding: 2rem;
+		}
 	}
 </style>
