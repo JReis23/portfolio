@@ -16,6 +16,28 @@
 	clearTimeout();
 </script>
 
+<svelte:head>
+	<title>Joao REIS - Développeur Web Nouvelle Aquitaine, Bordeaux</title>
+	<meta name="author" content="Joao REIS" />
+	<meta name="copyright" content="Joao REIS" />
+	<meta name="robots" content="follow, index" />
+	<link rel="canonical" href="https://www.jreis.org" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Joao REIS - Développeur Web Nouvelle Aquitaine, Bordeaux" />
+	<meta
+		property="og:description"
+		content="Développeur web installé à Montendre près de Bordeaux. Spécialiste Svelte, Sveltekit, Django, React. Front-end, Back-end et Full-stack"
+	/>
+	<meta property="og:site_name" content="Joao REIS - Portfolio" />
+	<meta name="twitter:title" content="Joao REIS - Développeur Web Nouvelle Aquitaine, Bordeaux" />
+	<meta
+		name="twitter:description"
+		content="Développeur web installé à Montendre près de Bordeaux. Spécialiste Svelte, Sveltekit, Django, React"
+	/>
+	<meta name="twitter:site" content="@ego2323" />
+	<meta name="twitter:creator" content="@ego2323" />
+</svelte:head>
+
 {#if !render}
 	<div class="landing">
 		<Landing />
