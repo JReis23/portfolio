@@ -25,7 +25,7 @@
 				});
 				tl.from(box, {
 					y: 100,
-					x: 50,
+					x: -50,
 					duration: 1.6,
 					delay: 0.6,
 					opacity: 0,
