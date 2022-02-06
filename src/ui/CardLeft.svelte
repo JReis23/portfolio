@@ -165,9 +165,9 @@
 		grid-auto-rows: minmax(100px, auto);
 		max-width: 100%;
 		grid-template-areas:
-			' title title title title title title img-left img-left img-left img-left img-lef timg-left'
-			' box box box box box box img-left img-left img-left img-left img-lef timg-left'
-			' goto goto goto goto goto goto img-left img-left img-left img-left img-lef timg-left';
+			' title title title title title title img-left img-left img-left img-left img-left img-left'
+			' box box box box box box img-left img-left img-left img-left img-left img-left'
+			' goto goto goto goto goto goto img-left img-left img-left img-left img-left img-left';
 	}
 
 	.img-left {

@@ -34,9 +34,10 @@
 			<div class="logo">
 				<img src="../../img/vectorpaint.svg" alt="logo joao reis" />
 			</div>
-			<div class="flex" on:click|preventDefault={handle}>
-				<div class="flex visible md:invisible justify-end">
+			<div class="flex">
+				<div class="flex md:hidden justify-end">
 					<svg
+						on:click={handle}
 						fill="#64ffda"
 						width="36"
 						height="36"
@@ -93,7 +94,7 @@
 			<div class="logo">
 				<img src="../static/img/vectorpaint.svg" alt="" />
 			</div>
-			<div class="flex" on:click={handle}>
+			<div class="flex">
 				<div class="flex visible md:invisible justify-end">
 					<svg
 						fill="#64ffda"
@@ -108,6 +109,7 @@
 						viewBox="0 0 64 64"
 						style="enable-background:new 0 0 64 64;"
 						xml:space="preserve"
+						on:click={handle}
 					>
 						<g>
 							<path

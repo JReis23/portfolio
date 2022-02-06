@@ -14,9 +14,9 @@
 </script>
 
 <section id="index">
-	<h1>Salut, je m'appelle,</h1>
-	<h2>João Reis</h2>
-	<h3>je suis développeur Web.</h3>
+	<h2>Salut, je m'appelle</h2>
+	<h1>João Reis</h1>
+	<h3>et je suis développeur Web.</h3>
 	<p>
 		Je suis un développeur web spécialisé dans la création du front-end de tout site web, je
 		développe également des applications back-end à intégrer aux solutions front-end que je crée.
@@ -45,15 +45,20 @@
 		margin: 0 auto;
 	}
 
-	h1 {
+	h2 {
 		margin-bottom: 40px;
+		color: #64ffda;
+		font-family: 'Fira Code Light';
+		font-size: 0.8rem;
 	}
 
-	h2 {
+	h1 {
 		font-size: clamp(40px, 8vw, 80px);
 		line-height: 0.9;
 		margin-bottom: 10px;
 		font-weight: 600;
+		font-family: 'Calibre Semibold';
+		color: #ccd6f6;
 	}
 
 	h3 {
