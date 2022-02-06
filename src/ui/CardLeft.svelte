@@ -39,7 +39,7 @@
 					}
 				});
 				tl.from(box, {
-					y: 0,
+					y: 100,
 					x: 0,
 					duration: 1.6,
 					delay: 0.6,
@@ -52,7 +52,10 @@
 </script>
 
 <article class="card-left" bind:this={box}>
-	<div class="title items-start flex flex-col justify-center">
+	<a href={link} target="_blank" class="img-left shadow-xl">
+		<img src={image} alt={imageAlt} />
+	</a>
+	<div class="title items-end flex flex-col justify-center">
 		<h4>Featured Project</h4>
 		<h2>{title}</h2>
 	</div>
@@ -204,6 +207,7 @@
 
 	.title {
 		grid-area: title;
+		z-index: 3;
 	}
 
 	.box {
@@ -221,6 +225,7 @@
 
 	.goto {
 		grid-area: goto;
+		z-index: 3;
 	}
 
 	li {
@@ -236,5 +241,41 @@
 
 	svg:hover {
 		fill: #64ffda;
+	}
+
+	@media (max-width: 768px) {
+		.img-left {
+			grid-area: img-left;
+			grid-row: 1/4;
+			grid-column: 1/13;
+			transition: 0.5s ease-in-out;
+			border-radius: 5px;
+			position: relative;
+			display: inline-block;
+		}
+
+		.img-left::after {
+			content: '';
+			background: rgba(10, 24, 46, 0.85);
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			transition: 0.5s ease-in-out;
+			border-radius: 5px;
+		}
+
+		.title {
+			grid-column: 1/12;
+		}
+
+		.box {
+			grid-column: 2/12;
+		}
+
+		.goto {
+			grid-column: 1/13;
+		}
 	}
 </style>

@@ -21,9 +21,10 @@
 {#if $openNav}
 	<div
 		class="slide-backdrop flex flex-col align-center"
-		transition:fly={{ duration: 1500, opacity: 0, delay: 300, y: -600, easing: quintOut }}
+		in:fly={{ duration: 1500, opacity: 0.5, delay: 300, x: 768, easing: quintOut }}
+		out:fly={{ duration: 1500, opacity: 1, delay: 300, x: 768, easing: quintOut }}
 	>
-		<div class="flex flex-col">
+		<div class="flex flex-col pb-36">
 			<ol class="flex flex-col text-left">
 				<li class="lnk"><a href="#me" on:click|preventDefault={scrollIntoView}> Moi</a></li>
 				<li class="lnk">
@@ -45,7 +46,7 @@
 				>
 			</div>
 		</div>
-		<div class="social bottom-0 fixed pb-10">
+		<div class="social bottom-0 fixed pb-20">
 			<ul class="flex">
 				<li class="social-link ">
 					<a

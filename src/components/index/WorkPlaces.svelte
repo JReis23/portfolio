@@ -224,8 +224,10 @@
 		}
 
 		.buttons {
-			width: calc(100% + 100px);
-			overflow-x: auto;
+			overflow-x: scroll;
+			-webkit-overflow-scrolling: touch;
+			width: 98vw;
+			white-space: nowrap;
 		}
 	}
 </style>

@@ -102,7 +102,6 @@
 		}
 		.secondary {
 			padding: 0.3rem 0.3rem;
-			border-left: none;
 		}
 	}
 </style>

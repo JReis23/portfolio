@@ -16,16 +16,37 @@
 	let box;
 
 	onMount(() => {
-		gsap.from(box, {
-			scrollTrigger: {
-				trigger: box
+		ScrollTrigger.matchMedia({
+			'(min-width: 800px)': function () {
+				let tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: box
+					}
+				});
+				tl.from(box, {
+					y: 100,
+					x: 50,
+					duration: 1.6,
+					delay: 0.6,
+					opacity: 0,
+					ease: 'slow'
+				});
 			},
-			y: 100,
-			x: -50,
-			duration: 1.6,
-			delay: 0.6,
-			opacity: 0,
-			ease: 'slow'
+			'(max-width: 799px)': function () {
+				let tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: box
+					}
+				});
+				tl.from(box, {
+					y: 100,
+					x: 0,
+					duration: 1.6,
+					delay: 0.6,
+					opacity: 0,
+					ease: 'slow'
+				});
+			}
 		});
 	});
 </script>
@@ -185,6 +206,7 @@ l9.6,4.8L54.6,48.1z"
 	} */
 	.title {
 		grid-area: title;
+		z-index: 3;
 	}
 	.box {
 		grid-area: box;
@@ -201,6 +223,7 @@ l9.6,4.8L54.6,48.1z"
 
 	.goto {
 		grid-area: goto;
+		z-index: 3;
 	}
 
 	li {
@@ -216,5 +239,41 @@ l9.6,4.8L54.6,48.1z"
 
 	svg:hover {
 		fill: #64ffda;
+	}
+
+	@media (max-width: 768px) {
+		.img-right {
+			grid-area: img-right;
+			grid-row: 1/4;
+			grid-column: 1/13;
+			transition: 0.5s ease-in-out;
+			border-radius: 5px;
+			position: relative;
+			display: inline-block;
+		}
+
+		.img-right::after {
+			content: '';
+			background: rgba(10, 24, 46, 0.85);
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			transition: 0.5s ease-in-out;
+			border-radius: 5px;
+		}
+
+		.title {
+			grid-column: 1/12;
+		}
+
+		.box {
+			grid-column: 2/12;
+		}
+
+		.goto {
+			grid-column: 1/13;
+		}
 	}
 </style>
