@@ -125,7 +125,9 @@
 
 	@media (max-width: 768px) {
 		.photo {
-			display: none;
+			display: flex;
+			justify-content: center;
+			padding-top: 5rem;
 		}
 
 		ul {
