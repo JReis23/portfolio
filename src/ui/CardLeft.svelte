@@ -55,7 +55,7 @@
 	<a href={link} target="_blank" class="img-left shadow-xl">
 		<img src={image} alt={imageAlt} />
 	</a>
-	<div class="title items-end flex flex-col justify-center">
+	<div class="title flex flex-col justify-center">
 		<h4>Featured Project</h4>
 		<h2>{title}</h2>
 	</div>

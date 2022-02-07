@@ -200,10 +200,7 @@ l9.6,4.8L54.6,48.1z"
 		width: 100%;
 		height: 100%;
 	}
-	/* a {
-		height: 100%;
-		width: 100%;
-	} */
+
 	.title {
 		grid-area: title;
 		z-index: 3;
