@@ -38,7 +38,7 @@
 				<div class="flex md:hidden justify-end">
 					<svg
 						on:click={handle}
-						fill="#64ffda"
+						fill="var(--green)"
 						width="36"
 						height="36"
 						version="1.1"
@@ -97,7 +97,7 @@
 			<div class="flex">
 				<div class="flex visible md:invisible justify-end">
 					<svg
-						fill="#64ffda"
+						fill="var(--green)"
 						width="36"
 						height="36"
 						version="1.1"
@@ -156,7 +156,7 @@
 		padding: 1rem 2rem;
 		position: fixed;
 		width: 100%;
-		background: #0a182e;
+		background: var(--navy);
 	}
 
 	img {
@@ -177,32 +177,20 @@
 
 	a::before {
 		content: '0' counter(item) '.';
-		color: #64ffda;
+		color: var(--green);
 		margin-right: 5px;
 	}
 
 	a:hover {
-		color: #64ffda;
+		color: var(--green);
 	}
 
 	a:focus,
 	a:active {
-		color: #64ffda;
+		color: var(--green);
 	}
 
 	.button {
 		margin-left: 2rem;
-	}
-
-	.slide-backdrop {
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		background: #0a182e;
-		z-index: 9;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
 	}
 </style>

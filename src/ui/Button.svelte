@@ -18,14 +18,14 @@
 
 <style>
 	.active {
-		border-left: 3px solid #64ffda !important;
+		border-left: 3px solid var(--green) !important;
 		outline: none;
-		color: #64ffda !important;
+		color: var(--green) !important;
 	}
 
 	.primary {
-		border: 1px solid #64ffda;
-		color: #64ffda;
+		border: 1px solid var(--green);
+		color: var(--green);
 		display: flex;
 		align-items: center;
 		border-radius: 3px;
@@ -36,12 +36,12 @@
 	}
 
 	.primary:hover {
-		background: rgba(88, 227, 197, 0.1);
+		background: rgba(var(--rgba-green), 0.2);
 	}
 
 	.primary-main {
-		border: 1px solid #64ffda;
-		color: #64ffda;
+		border: 1px solid var(--green);
+		color: var(--green);
 		display: flex;
 		align-items: center;
 		border-radius: 3px;
@@ -52,33 +52,33 @@
 	}
 
 	.primary-main:hover {
-		background: rgba(88, 227, 197, 0.1);
+		background: rgba(var(--rgba-green), 0.2);
 	}
 
 	.secondary {
-		color: #8993b0;
+		color: var(--slate);
 		font-family: Fira Code Light;
 		padding: 0.5rem 0.9rem;
 		text-align: center;
 		width: fit-content;
-		border-left: solid 1px #8993b0;
+		border-left: solid 1px var(--slate);
 		font-size: 0.875rem;
 	}
 
 	/* .secondary:focus,
 	.secondary:active {
-		border-left: 3px solid #64ffda;
+		border-left: 3px solid var(--green);
 		outline: none;
-		color: #64ffda;
+		color: var(--green);
 	} */
 
 	.secondary:hover {
-		background: rgba(88, 227, 197, 0.1);
+		background: rgba(var(--rgba-green), 0.2);
 	}
 
 	.submit {
-		border: 1px solid #64ffda;
-		color: #64ffda;
+		border: 1px solid var(--green);
+		color: var(--green);
 		display: flex;
 		align-items: center;
 		border-radius: 3px;
@@ -90,15 +90,15 @@
 	}
 
 	.submit:hover {
-		background: rgba(88, 227, 197, 0.1);
+		background: rgba(var(--rgba-green), 0.2);
 	}
 
 	@media (max-width: 768px) {
 		.active {
-			border-bottom: 3px solid #64ffda !important;
+			border-bottom: 3px solid var(--green) !important;
 			border-left: none !important;
 			outline: none;
-			color: #64ffda !important;
+			color: var(--green) !important;
 		}
 		.secondary {
 			padding: 0.3rem 0.3rem;

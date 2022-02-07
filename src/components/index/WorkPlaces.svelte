@@ -176,12 +176,12 @@
 		text-decoration: none;
 		position: relative;
 		font-size: 1.7rem;
-		color: #64ffda;
+		color: var(--green);
 		font-family: Calibre Regular;
 	}
 
 	li {
-		color: #8993b0;
+		color: var(--slate);
 		font-family: Calibre Regular;
 		max-width: 50ch;
 		font-size: 1.175em;
@@ -200,7 +200,7 @@
 		left: 0;
 		bottom: 0.775rem;
 		width: 0;
-		border-bottom: solid 1px #64ffda;
+		border-bottom: solid 1px var(--green);
 		animation: border_anim 0.7s forwards;
 	}
 

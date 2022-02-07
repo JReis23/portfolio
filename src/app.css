@@ -4,6 +4,20 @@
 
 @layer base{
 
+    :root{
+        --dark-navy:#020c1b;
+        --navy: #0a192f;
+        --light-navy: #112240;
+        --lightest-navy: #233554;
+        --slate: #8892b0;
+        --light-slate: #a8b2d1;
+        --lightest-slate: #ccd6f6;
+        --white: #e6f1ff;
+        --green: #64ffda;
+        --rgba-green: 100, 255, 218;
+
+    }
+
     
 
     @font-face {
@@ -54,71 +68,71 @@
     
 
     body::-webkit-scrollbar-track{
-        background: #0a182e;
+        background: var(--navy);
 
     }
 
     body::-webkit-scrollbar-thumb{
-        background: #8993b0;
+        background: var(--slate);
         border: 0.3em solid #0a182e;
         border-radius: 100vw;
 
     }
 
     *{
-        scrollbar-color:#8993b0 #0a182e ;
+        scrollbar-color:var(--slate) var(--navy) ;
 
     }
 
     body {
-        background: #0a182e;
+        background: var(--navy);
         counter-reset: section;
     }
 
     h1 {
-        color: #64ffda;
+        color: var(--green);
         font-family: 'Fira Code Light';
 		font-size: 0.8rem;
 
     }
 
     h2 {
-        color: #ccd6f6;
+        color: var(--lightest-slate);
         font-family: 'Calibre Semibold';
         font-size: 2rem;
     }
 
     h3 {
-        color: #8993b0;
+        color: var(--slate);
         font-family: 'Calibre Semibold'; 
         font-size: 1.7rem;
     }
 
     h4 {
-        color: #64ffda;
+        color: var(--green);
     }
 
     h5 {
-        color: #8993b0;
+        color: var(--light-slate);
         font-size: 1.5rem;
     }
 
     a {
-        color: #afb8d7;
+        color: var(--light-slate);
         font-family: 'Fira Code Light';
 		font-size: 0.8rem;
 
     }
 
     p {
-        color: #8892b0;
+        color: var(--slate);
         font-family: 'Calibre Regular';
         font-size: 1.175em; 
         line-height: 1.8;
     }
 
     span {
-        color: #64ffda;
+        color: var(--green);
     }
 
 
@@ -129,7 +143,7 @@
 
     li {
         font-family: Fira Code Regular;
-        color: #8993b0
+        color: var(--slate)
     }
 
     .numbered-heading {
@@ -146,7 +160,7 @@
         position: relative;
         counter-increment: section 1;
         content: "0" counter(section) ".";
-        color: #56dec2;
+        color: var(--green);
         font-family: 'Fira Code Light';
         font-size: 1.2rem;
         margin-right: 1rem;
@@ -160,7 +174,7 @@
         width: 300px;
         height: 1px;
         margin-left: 1.2rem;
-        background: #8993b0;
+        background: var(--slate);
     }
 
     @media (min-width: 1024px) {

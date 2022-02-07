@@ -53,18 +53,18 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: #112240;
+		background: var(--navy);
 		border-radius: 100%;
 		margin: 3rem 3rem;
 	}
 
 	svg {
-		fill: #8892b0;
+		fill: var(--slate);
 		width: 3rem;
 		height: 3rem;
 	}
 
 	svg:hover {
-		fill: #64ffda;
+		fill: var(--green);
 	}
 </style>

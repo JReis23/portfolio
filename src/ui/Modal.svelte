@@ -15,7 +15,7 @@
 		height: 100vh;
 		width: 100vw;
 		position: fixed;
-		background: #0a182e;
+		background: var(--navy);
 		z-index: 1000;
 		overflow-y: hidden;
 		display: flex;
@@ -25,7 +25,7 @@
 	}
 
 	.modal-box {
-		background: #112240;
+		background: var(--light-navy);
 		display: flex;
 		flex-flow: column;
 		align-items: center;

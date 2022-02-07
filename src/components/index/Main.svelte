@@ -47,7 +47,7 @@
 
 	h2 {
 		margin-bottom: 40px;
-		color: #64ffda;
+		color: var(--green);
 		font-family: 'Fira Code Light';
 		font-size: 0.8rem;
 	}
@@ -58,7 +58,7 @@
 		margin-bottom: 10px;
 		font-weight: 600;
 		font-family: 'Calibre Semibold';
-		color: #ccd6f6;
+		color: var(--lightest-slate);
 	}
 
 	h3 {

@@ -182,7 +182,7 @@
 
 	.img-left::after {
 		content: '';
-		background: rgba(88, 227, 197, 0.3);
+		background: rgba(var(--rgba-green), 0.4);
 		position: absolute;
 		display: block;
 		width: 100%;
@@ -212,7 +212,7 @@
 
 	.box {
 		grid-area: box;
-		background: #112240;
+		background: var(--light-navy);
 		border-radius: 5px;
 		padding: 0 1rem;
 		z-index: 1;
@@ -235,12 +235,12 @@
 	svg {
 		width: 2rem;
 		height: 2rem;
-		fill: #8993b0;
+		fill: var(--slate);
 		margin: 1rem;
 	}
 
 	svg:hover {
-		fill: #64ffda;
+		fill: var(--green);
 	}
 
 	@media (max-width: 768px) {

@@ -163,16 +163,16 @@
 
 	a:hover {
 		transform: translateY(-5px);
-		color: #64ffda;
+		color: var(--green);
 	}
 
 	svg {
-		fill: #8993b0;
+		fill: var(--slate);
 		width: 1.5rem;
 	}
 
 	svg:hover {
-		fill: #64ffda;
+		fill: var(--green);
 	}
 
 	@media (max-width: 768px) {

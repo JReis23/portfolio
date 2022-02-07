@@ -36,12 +36,12 @@
 		align-items: center;
 		position: absolute;
 		z-index: 1001;
-		background: #030d1b;
+		background: var(--dark-navy);
 		overflow: hidden;
 	}
 
 	p {
-		font-size: 200px;
-		color: #64ffda;
+		font-size: 100px;
+		color: var(--green);
 	}
 </style>

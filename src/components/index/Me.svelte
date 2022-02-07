@@ -55,7 +55,7 @@
 
 	li::before {
 		content: '▹';
-		color: rgba(88, 227, 197, 1);
+		color: var(--green);
 		margin-right: 1.175rem;
 	}
 
@@ -76,7 +76,7 @@
 
 	picture::after {
 		content: '';
-		background: rgba(88, 227, 197, 0.3);
+		background: rgba(var(--rgba-green), 0.3);
 		position: absolute;
 		display: block;
 		width: 100%;
@@ -95,7 +95,7 @@
 
 	picture::before {
 		content: '';
-		border: 1px solid #64ffda;
+		border: 1px solid var(--green);
 		position: absolute;
 		top: 10px;
 		left: 10px;

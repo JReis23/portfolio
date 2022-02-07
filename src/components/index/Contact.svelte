@@ -138,7 +138,7 @@
 		font-size: clamp(16px, 8vw, 26px);
 	}
 	label {
-		color: #ccd6f6;
+		color: var(--lightest-slate);
 		font-family: Fira Code Light;
 		padding: 0.25rem 0;
 		font-size: 1.1rem;
@@ -156,25 +156,25 @@
 	input {
 		padding: 0.6rem 0.6rem;
 		border-radius: 5px;
-		background-color: #ccd6f6;
+		background-color: var(--lightest-slate);
 		color: #0a182e;
 	}
 
 	input:focus,
 	input:active {
-		outline: 4px solid #64ffda;
+		outline: 4px solid var(--green);
 	}
 
 	textarea {
 		padding: 0.6rem 0.6rem;
 		border-radius: 5px;
-		background-color: #ccd6f6;
+		background-color: var(--lightest-slate);
 		color: #0a182e;
 	}
 
 	textarea:focus,
 	textarea:active {
-		outline: 4px solid #64ffda;
+		outline: 4px solid var(--green);
 	}
 
 	a {
@@ -182,7 +182,7 @@
 		text-decoration: none;
 		position: relative;
 		font-size: 1.7rem;
-		color: #64ffda;
+		color: var(--green);
 		font-family: Calibre Regular;
 	}
 
@@ -192,7 +192,7 @@
 		left: 0;
 		bottom: 0.775rem;
 		width: 0;
-		border-bottom: solid 1px #64ffda;
+		border-bottom: solid 1px var(--green);
 		animation: border_anim 0.7s forwards;
 	}
 

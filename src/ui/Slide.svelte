@@ -225,7 +225,7 @@
 
 	.lnk a::before {
 		content: '0' counter(item) '.';
-		color: #64ffda;
+		color: var(--green);
 		margin-right: 5px;
 	}
 
@@ -234,12 +234,12 @@
 	}
 
 	svg {
-		fill: #8993b0;
+		fill: var(--slate);
 		width: 2rem;
 	}
 
 	svg:hover {
-		fill: #64ffda;
+		fill: var(--green);
 	}
 
 	.button {
