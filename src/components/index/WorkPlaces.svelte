@@ -72,7 +72,9 @@
 			{#if buttonOne}
 				<div class="py-6">
 					<h3>
-						Stagiaire <span>@ <a href="http://www.patriarca.fr" target="_blank">Montauban</a></span>
+						Stagiaire <span
+							>@ <a href="https://www.montauban-renovation.com/" target="_blank">Montauban</a></span
+						>
 					</h3>
 					<p>février 2021 à mars 2021</p>
 				</div>
