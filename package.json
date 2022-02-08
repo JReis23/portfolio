@@ -35,6 +35,7 @@
   "dependencies": {
     "@sveltejs/adapter-node": "next",
     "daisyui": "^1.25.3",
-    "gsap": "file:gsap-bonus.tgz"
+    "gsap": "file:gsap-bonus.tgz",
+    "smooth-scrollbar": "^8.7.4"
   }
 }

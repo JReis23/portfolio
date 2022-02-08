@@ -48,7 +48,7 @@
 	};
 </script>
 
-<section id="experience">
+<section id="experience" class="workplaces">
 	<h2 class="numbered-heading">Où j'ai travaillé</h2>
 	<div class="flex flex-col md:flex-row">
 		<div class="buttons flex flex-row md:flex-col self-center">

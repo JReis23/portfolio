@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section id="me">
+<section id="me" class="me">
 	<h2 class="numbered-heading">Moi</h2>
 	<article class="flex flex-col md:flex-row">
 		<div>
@@ -44,6 +44,9 @@
 				<img src="/img/me.jpg" alt="joao reis" />
 			</picture>
 		</div>
+	</article>
+	<article class="dummy pt32">
+		<p>Hello</p>
 	</article>
 </section>
 

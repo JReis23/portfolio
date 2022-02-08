@@ -6,10 +6,11 @@
 	import Contact from '../components/index/Contact.svelte';
 	import Social from '../components/index/Social.svelte';
 	import Landing from '../components/index/Landing.svelte';
-	import { fade } from 'svelte/transition';
 	import Slide from '../ui/Slide.svelte';
+	import { fade } from 'svelte/transition';
 
 	let render;
+
 	setTimeout(() => {
 		render = true;
 	}, 3000);
@@ -44,14 +45,14 @@
 	</div>
 {:else}
 	<div in:fade={{ delay: 2000, duration: 1000 }}>
-		<main id="projects">
-			<Slide />
+		<main id="projects" class="main">
 			<Main />
 			<Me />
 			<WorkPlaces />
 			<Projects />
 			<Contact />
 			<Social />
+			<Slide />
 		</main>
 	</div>
 {/if}
