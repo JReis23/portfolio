@@ -1,50 +1,26 @@
 <script>
 	import Button from '../../ui/Button.svelte';
 
-	let buttonOne = true;
-	let buttonTwo = false;
-	let buttonThree = false;
-	let buttonFour = false;
-	let buttonFive = false;
+	export let societyButton = 'montauban';
 
-	const handleButtonOne = () => {
-		buttonOne = true;
-		buttonTwo = false;
-		buttonThree = false;
-		buttonFour = false;
-		buttonFive = false;
+	const handleMontauban = () => {
+		societyButton = 'montauban';
 	};
 
-	const handleButtonTwo = () => {
-		buttonTwo = true;
-		buttonOne = false;
-		buttonThree = false;
-		buttonFour = false;
-		buttonFive = false;
+	const handleRwf = () => {
+		societyButton = 'rwf';
 	};
 
-	const handleButtonThree = () => {
-		buttonTwo = false;
-		buttonOne = false;
-		buttonThree = true;
-		buttonFour = false;
-		buttonFive = false;
+	const handlePatriarca = () => {
+		societyButton = 'patriarca';
 	};
 
-	const handleButtonFour = () => {
-		buttonTwo = false;
-		buttonOne = false;
-		buttonThree = false;
-		buttonFour = true;
-		buttonFive = false;
+	const handleMorousseau = () => {
+		societyButton = 'morousseau';
 	};
 
-	const handleButtonFive = () => {
-		buttonTwo = false;
-		buttonOne = false;
-		buttonThree = false;
-		buttonFour = false;
-		buttonFive = true;
+	const handleVodafone = () => {
+		societyButton = 'vodafone';
 	};
 </script>
 
@@ -52,24 +28,34 @@
 	<h2 class="numbered-heading">Où j'ai travaillé</h2>
 	<div class="flex flex-col md:flex-row">
 		<div class="buttons flex flex-row md:flex-col self-center">
-			<Button on:click={handleButtonOne} active={buttonOne ? 'active' : null} type="secondary"
-				>Montauban</Button
+			<Button
+				on:click={handleMontauban}
+				active={societyButton === 'montauban' ? 'active' : null}
+				type="secondary">Montauban</Button
 			>
-			<Button on:click={handleButtonTwo} active={buttonTwo ? 'active' : null} type="secondary"
-				>Rural Web Factory</Button
+			<Button
+				on:click={handleRwf}
+				active={societyButton === 'rwf' ? 'active' : null}
+				type="secondary">Rural Web Factory</Button
 			>
-			<Button on:click={handleButtonThree} active={buttonThree ? 'active' : null} type="secondary"
-				>Patriarca</Button
+			<Button
+				on:click={handlePatriarca}
+				active={societyButton === 'patriarca' ? 'active' : null}
+				type="secondary">Patriarca</Button
 			>
-			<Button on:click={handleButtonFour} active={buttonFour ? 'active' : null} type="secondary"
-				>MO Rousseau</Button
+			<Button
+				on:click={handleMorousseau}
+				active={societyButton === 'morousseau' ? 'active' : null}
+				type="secondary">MO Rousseau</Button
 			>
-			<Button on:click={handleButtonFive} active={buttonFive ? 'active' : null} type="secondary"
-				>Vodafone</Button
+			<Button
+				on:click={handleVodafone}
+				active={societyButton === 'vodafone' ? 'active' : null}
+				type="secondary">Vodafone</Button
 			>
 		</div>
 		<div class="md:px-8 ">
-			{#if buttonOne}
+			{#if societyButton === 'montauban'}
 				<div class="py-6">
 					<h3>
 						Stagiaire <span
@@ -89,7 +75,7 @@
 					</li>
 					<li>Élaboration du projet avec la méthodologie <span>Scrum Agile</span></li>
 				</ul>
-			{:else if buttonTwo}
+			{:else if societyButton === 'rwf'}
 				<div class="py-6">
 					<h3>
 						Apprenant <span
@@ -107,7 +93,7 @@
 						développeur
 					</li>
 				</ul>
-			{:else if buttonThree}
+			{:else if societyButton === 'patriarca'}
 				<div class="py-6">
 					<h3>
 						Conducteur de travaux <span
@@ -130,7 +116,7 @@
 						méthodes, moyens humains et matériels, planification de l'opération
 					</li>
 				</ul>
-			{:else if buttonFour}
+			{:else if societyButton === 'morousseau'}
 				<div class="py-6">
 					<h3>
 						Conducteur de travaux <span>@ <a href="/">MO Rousseau</a></span>
@@ -151,7 +137,7 @@
 						méthodes, moyens humains et matériels, planification de l'opération
 					</li>
 				</ul>
-			{:else if buttonFive}
+			{:else if societyButton === 'vodafone'}
 				<div class="py-6">
 					<h3>
 						Conducteur de travaux <span
