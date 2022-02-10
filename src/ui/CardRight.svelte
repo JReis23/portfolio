@@ -158,7 +158,7 @@ l9.6,4.8L54.6,48.1z"
 
 <style>
 	article {
-		padding: 7rem 1rem;
+		padding: 3.5rem 1rem;
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-auto-rows: minmax(100px, auto);
