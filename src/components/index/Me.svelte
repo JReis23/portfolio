@@ -45,9 +45,6 @@
 			</picture>
 		</div>
 	</article>
-	<article class="dummy pt32">
-		<p>Hello</p>
-	</article>
 </section>
 
 <style>
