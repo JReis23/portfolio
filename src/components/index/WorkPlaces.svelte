@@ -1,7 +1,11 @@
 <script>
 	import Button from '../../ui/Button.svelte';
 
-	export let societyButton = 'montauban';
+	export let societyButton = 'noveoo';
+
+	const handleNoveoo = () => {
+		societyButton = 'noveoo';
+	};
 
 	const handleMontauban = () => {
 		societyButton = 'montauban';
@@ -29,6 +33,11 @@
 	<div class="flex flex-col md:flex-row">
 		<div class="buttons flex flex-row md:flex-col self-center">
 			<Button
+				on:click={handleNoveoo}
+				active={societyButton === 'noveoo' ? 'active' : null}
+				type="secondary">Noveoo</Button
+			>
+			<Button
 				on:click={handleMontauban}
 				active={societyButton === 'montauban' ? 'active' : null}
 				type="secondary">Montauban</Button
@@ -43,11 +52,7 @@
 				active={societyButton === 'patriarca' ? 'active' : null}
 				type="secondary">Patriarca</Button
 			>
-			<Button
-				on:click={handleMorousseau}
-				active={societyButton === 'morousseau' ? 'active' : null}
-				type="secondary">MO Rousseau</Button
-			>
+
 			<Button
 				on:click={handleVodafone}
 				active={societyButton === 'vodafone' ? 'active' : null}
@@ -116,25 +121,24 @@
 						méthodes, moyens humains et matériels, planification de l'opération
 					</li>
 				</ul>
-			{:else if societyButton === 'morousseau'}
+			{:else if societyButton === 'noveoo'}
 				<div class="py-6">
 					<h3>
-						Conducteur de travaux <span>@ <a href="/">MO Rousseau</a></span>
+						Développeur Web / Fondateur <span>@ <a href="/">Noveoo</a></span>
 					</h3>
-					<p>Octobre 2017 à Décembre 2018</p>
+					<p>Septembre 2021 à <span>Présent</span></p>
 				</div>
 				<ul>
 					<li>
-						Coordonner les travaux réalisés dans le cadre d’un ou plusieurs chantiers dans le
-						respect de la qualité, des délais et du budget.
+						Création de sites Vitrine, Ecommerce, site sur mesure et refonte de sites avec
+						l'utilisation de Svelte, CMS, Django, Tailwind, Bootstrap...
 					</li>
 					<li>
-						Suivi technique, administratif et financier du chantier ainsi que des entreprises
-						sous-traitantes.
+						Suivi technique et maintenance des sites internet ou des applications web créés en
+						fonction des besoins.
 					</li>
 					<li>
-						Etude du dossier et des contrats, préparation de l'opération, définition des besoins,
-						méthodes, moyens humains et matériels, planification de l'opération
+						Gestion de projet avec l'utlisation de la méthodologie Agile avec une approche Scrum.
 					</li>
 				</ul>
 			{:else if societyButton === 'vodafone'}
