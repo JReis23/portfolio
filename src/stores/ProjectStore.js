@@ -7,7 +7,7 @@ const ProjectStore = writable([
 		tech: 'Svelte Tailwind',
 		image: '../../img/template.png',
 		imageAlt: 'template tailwind',
-		link: 'https://github.com/JReis23/second-dummy.git',
+		link: 'https://template-for-construction.vercel.app/',
 		github: 'https://github.com/JReis23/second-dummy.git',
 		description:
 			'Site modèle créé en Svelte pour proposer aux clients de l’agence Noveoo un thème possible pour leur site personnel.'
