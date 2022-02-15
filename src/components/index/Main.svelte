@@ -29,7 +29,7 @@
 	<div class="button-main mt-16">
 		<Button
 			rel="external"
-			href="https://drive.google.com/uc?id=1rHdIcz03FiWetX8JjRCwvVnfiVIvrbfR"
+			href="https://drive.google.com/uc?id=1UoEYh2pBT0SBUudj7mvpgtRU2A_-7D2_"
 			target="_blank"
 			type="primary-main"
 			>Regardez mon CV !
