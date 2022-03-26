@@ -1,9 +1,10 @@
 <script>
 	import Modal from '../../ui/Modal.svelte';
 	import Button from '../../ui/Button.svelte';
+	import supabase from '../../lib/db';
 
-	let data = { name: '', email: '', reason: '' };
-	let err = { name: '', email: '', reason: '' };
+	let name, email, description;
+	let err = { name: '', email: '', description: '' };
 	let valid = false;
 	let error = null;
 	let showModal = true;
@@ -11,51 +12,43 @@
 	const closeModal = () => {
 		showModal = false;
 		error = null;
-		data = { name: '', email: '', reason: '' };
-		return data;
 	};
 
 	const handleSubmit = async () => {
 		valid = true;
 
-		if (data.name.trim().length <= 2 || data.name.trim().length >= 50) {
+		if (name.trim().length <= 2 || name.trim().length >= 50) {
 			valid = false;
 			err.name = "Votre nom n'est pas valide";
 		} else {
 			err.name = '';
 		}
 
-		if (data.email.trim().length <= 5 || data.email.trim().length > 40) {
+		if (email.trim().length <= 5 || email.trim().length > 40) {
 			valid = false;
 			err.email = "Votre email n'est pas valide";
 		} else {
 			err.email = '';
 		}
 
-		if (data.reason.trim().length === 0 || data.email.trim().length > 255) {
+		if (description.trim().length === 0 || email.trim().length > 255) {
 			valid = false;
-			err.reason = "Votre message n'est pas valide";
+			err.description = "Votre message n'est pas valide";
 		} else {
-			err.reason = '';
+			err.description = '';
 		}
 
 		if (valid) {
 			try {
-				const response = await fetch('https://api.jreis.org/api/contacts', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify({ data })
-				});
-
-				data = { name: '', email: '', reason: '' };
-				return await response.json();
-			} catch (e) {
-				error = e;
-				if (error) {
-					showModal = true;
-				}
+				const { data, error } = await supabase
+					.from('contact')
+					.insert([{ name, email, description }]);
+				name = '';
+				email = '';
+				description = '';
+				if (error) throw (showModal = true);
+			} catch (error) {
+				alert(error.error_description || error.message);
 				error.message = 'cjfreis23@gmail.com';
 			}
 		}
@@ -90,7 +83,7 @@
 					<label for="name" class="">
 						<span class="">Nom</span>
 					</label>
-					<input type="text" placeholder="Votre nom" bind:value={data.name} />
+					<input type="text" placeholder="Votre nom" bind:value={name} />
 					<label for="name" class="">
 						<span class="label-text-alt invalid">{err.name}</span>
 					</label>
@@ -99,13 +92,7 @@
 					<label for="name" class="">
 						<span class="">E-mail</span>
 					</label>
-					<input
-						type="text"
-						placeholder="Votre e-mail"
-						novalidate
-						class=""
-						bind:value={data.email}
-					/>
+					<input type="text" placeholder="Votre e-mail" novalidate class="" bind:value={email} />
 					<label for="name" class="">
 						<span class="label-text-alt invalid">{err.email}</span>
 					</label>
@@ -119,10 +106,10 @@
 						rows="5"
 						placeholder="Raison du contact "
 						class=""
-						bind:value={data.reason}
+						bind:value={description}
 					/>
 					<label for="name" class="">
-						<span class="label-text-alt">{err.reason}</span>
+						<span class="label-text-alt">{err.description}</span>
 					</label>
 				</div>
 				<div class="mt-8">

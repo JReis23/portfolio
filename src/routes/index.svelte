@@ -1,3 +1,38 @@
+<!-- <script context="module">
+	export const load = async({ fetch }) => {
+		const query = `
+			query Doubled($x: Int) {
+				double(number: $x)
+			}
+		`;
+
+		const variables = {
+			x: 19,
+		};
+
+		const response = await fetch("/graphql", {
+			body: JSON.stringify({ query, variables }),
+			headers: {
+				"Authorization": "Token ABC123",
+				"Content-Type": "application/json",
+			},
+			method: "POST",
+		});
+
+		const { data, errors } = await response.json();
+
+		if (errors) return {
+			error: new Error(errors.map(({ message }) => message).join("\n")),
+			status: 500,
+		};
+
+		return {
+			props: {
+				doubled: data.double,
+			},
+		};
+	}
+</script> -->
 <script>
 	import Me from '../components/index/Me.svelte';
 	import Main from '../components/index/Main.svelte';
@@ -19,24 +54,6 @@
 
 <svelte:head>
 	<title>Joao REIS - Développeur Web Nouvelle Aquitaine, Bordeaux</title>
-	<meta name="author" content="Joao REIS" />
-	<meta name="copyright" content="Joao REIS" />
-	<meta name="robots" content="follow, index" />
-	<link rel="canonical" href="https://www.jreis.org" />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Joao REIS - Développeur Web Nouvelle Aquitaine, Bordeaux" />
-	<meta
-		property="og:description"
-		content="Développeur web installé à Montendre près de Bordeaux. Spécialiste Svelte, Sveltekit, Django, React. Front-end, Back-end et Full-stack"
-	/>
-	<meta property="og:site_name" content="Joao REIS - Portfolio" />
-	<meta name="twitter:title" content="Joao REIS - Développeur Web Nouvelle Aquitaine, Bordeaux" />
-	<meta
-		name="twitter:description"
-		content="Développeur web installé à Montendre près de Bordeaux. Spécialiste Svelte, Sveltekit, Django, React"
-	/>
-	<meta name="twitter:site" content="@ego2323" />
-	<meta name="twitter:creator" content="@ego2323" />
 </svelte:head>
 
 {#if !render}
@@ -61,21 +78,5 @@
 	div {
 		display: flex;
 		justify-content: center;
-	}
-
-	main {
-		width: 100%;
-		max-width: 1600px;
-		min-height: 100vh;
-		padding: 0 10rem;
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-	}
-
-	@media (max-width: 768px) {
-		main {
-			padding: 0 1rem;
-		}
 	}
 </style>

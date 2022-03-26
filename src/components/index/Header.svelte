@@ -66,15 +66,18 @@
 				</div>
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
-						<li class="lnk"><a href="#me" on:click|preventDefault={scrollIntoView}> Moi</a></li>
+						<li class="lnk"><a href="./#me"> Moi</a></li>
 						<li class="lnk">
-							<a href="#experience" on:click|preventDefault={scrollIntoView}> Expérience</a>
+							<a href="./#experience"> Expérience</a>
 						</li>
 						<li class="lnk">
-							<a href="#projets" on:click|preventDefault={scrollIntoView}> Projets</a>
+							<a href="./#projets"> Projets</a>
 						</li>
 						<li class="lnk">
-							<a href="#contact" on:click|preventDefault={scrollIntoView}> Contact</a>
+							<a href="./#contact"> Contact</a>
+						</li>
+						<li class="lnk">
+							<a href="./blog"> Blog</a>
 						</li>
 					</ol>
 					<div class="button">
@@ -126,15 +129,18 @@
 				</div>
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
-						<li class="lnk"><a href="#me" on:click|preventDefault={scrollIntoView}> Moi</a></li>
+						<li class="lnk"><a href="./#me"> Moi</a></li>
 						<li class="lnk">
-							<a href="#experience" on:click|preventDefault={scrollIntoView}> Expérience</a>
+							<a href="./#experience"> Expérience</a>
 						</li>
 						<li class="lnk">
-							<a href="#projets" on:click|preventDefault={scrollIntoView}> Projets</a>
+							<a href="./#projets"> Projets</a>
 						</li>
 						<li class="lnk">
-							<a href="#contact" on:click|preventDefault={scrollIntoView}> Contact</a>
+							<a href="./#contact"> Contact</a>
+						</li>
+						<li class="lnk">
+							<a href="./blog"> Blog</a>
 						</li>
 					</ol>
 					<div class="button">
