@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import Header from '../components/index/Header.svelte';
+	import Header from '../components/Header.svelte';
 	import ReturnTop from '../ui/ReturnTop.svelte';
 </script>
 

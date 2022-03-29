@@ -1,7 +1,7 @@
 <script>
-	import Modal from '../../ui/Modal.svelte';
-	import Button from '../../ui/Button.svelte';
-	import supabase from '../../lib/db';
+	import Modal from '../ui/Modal.svelte';
+	import Button from '../ui/Button.svelte';
+	import supabase from '../lib/db';
 
 	let name, email, description;
 	let err = { name: '', email: '', description: '' };
@@ -124,12 +124,6 @@
 	p {
 		font-size: clamp(16px, 8vw, 26px);
 	}
-	label {
-		color: var(--lightest-slate);
-		font-family: Fira Code Light;
-		padding: 0.25rem 0;
-		font-size: 1.1rem;
-	}
 
 	article {
 		width: clamp(360px, 48vw, 1000px);
@@ -138,30 +132,6 @@
 
 	form {
 		width: clamp(360px, 48vw, 1000px);
-	}
-
-	input {
-		padding: 0.6rem 0.6rem;
-		border-radius: 5px;
-		background-color: var(--lightest-slate);
-		color: #0a182e;
-	}
-
-	input:focus,
-	input:active {
-		outline: 4px solid var(--green);
-	}
-
-	textarea {
-		padding: 0.6rem 0.6rem;
-		border-radius: 5px;
-		background-color: var(--lightest-slate);
-		color: #0a182e;
-	}
-
-	textarea:focus,
-	textarea:active {
-		outline: 4px solid var(--green);
 	}
 
 	a {

@@ -1,5 +1,5 @@
 <script>
-	import Button from '../../ui/Button.svelte';
+	import Button from '../ui/Button.svelte';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { backIn, backOut, bounceIn, bounceInOut, bounceOut } from 'svelte/easing';

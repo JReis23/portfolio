@@ -1,17 +1,12 @@
 <script>
 	import Button from '../../ui/Button.svelte';
+	import supabase from '../../lib/db';
 	import { openNav } from '../../stores/OpenNav';
-	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
+	import { user, open } from '../../stores/sessionStore';
+	import { goto } from '$app/navigation';
 
 	let y = 0;
 	let onMove = 'scrolled';
-
-	onMount(() => {
-		const tl = gsap.timeline({ defaults: { duration: 0.8, opacity: 0 } });
-		tl.from('.lnk', { y: 10, x: -10, stagger: 0.5, delay: 4.6 });
-		tl.from('.button', { y: 10, x: -10 });
-	});
 
 	const handle = () => {
 		$openNav = !$openNav;
@@ -24,6 +19,17 @@
 			behavior: 'smooth'
 		});
 	}
+
+	const handleLogout = async () => {
+		try {
+			const { error } = await supabase.auth.signOut();
+			goto('/blog/login');
+			location.reload();
+			if (error) throw error;
+		} catch (error) {
+			alert(error.error_description || error.message);
+		}
+	};
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -66,27 +72,30 @@
 				</div>
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
-						<li class="lnk"><a href="./#me"> Moi</a></li>
+						<li class="lnk"><a href="/"> Accueil</a></li>
 						<li class="lnk">
-							<a href="./#experience"> Expérience</a>
+							<a href="/#experience"> Expérience</a>
 						</li>
 						<li class="lnk">
-							<a href="./#projets"> Projets</a>
+							<a href="/#projets"> Projets</a>
 						</li>
 						<li class="lnk">
-							<a href="./#contact"> Contact</a>
+							<a href="/#contact"> Contact</a>
 						</li>
 						<li class="lnk">
-							<a href="./blog"> Blog</a>
+							<a href="/blog"> Blog</a>
 						</li>
 					</ol>
-					<div class="button">
-						<Button
-							rel="external"
-							href="https://drive.google.com/uc?id=1UoEYh2pBT0SBUudj7mvpgtRU2A_-7D2_"
-							target="_blank">Curriculum</Button
-						>
-					</div>
+
+					{#if $user}
+						<div class="button">
+							<Button rel="external" on:click={handleLogout}>Déconnecter</Button>
+						</div>
+					{:else}
+						<div class="button">
+							<Button rel="external" href="/blog/login">Login</Button>
+						</div>
+					{/if}
 				</div>
 			</div>
 		</nav>
@@ -129,27 +138,29 @@
 				</div>
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
-						<li class="lnk"><a href="./#me"> Moi</a></li>
+						<li class="lnk"><a href="/"> Accueil</a></li>
 						<li class="lnk">
-							<a href="./#experience"> Expérience</a>
+							<a href="/#experience"> Expérience</a>
 						</li>
 						<li class="lnk">
-							<a href="./#projets"> Projets</a>
+							<a href="/#projets"> Projets</a>
 						</li>
 						<li class="lnk">
-							<a href="./#contact"> Contact</a>
+							<a href="/#contact"> Contact</a>
 						</li>
 						<li class="lnk">
-							<a href="./blog"> Blog</a>
+							<a href="/blog"> Blog</a>
 						</li>
 					</ol>
-					<div class="button">
-						<Button
-							rel="external"
-							href="https://drive.google.com/uc?id=1UoEYh2pBT0SBUudj7mvpgtRU2A_-7D2_"
-							target="_blank">Curriculum</Button
-						>
-					</div>
+					{#if $user}
+						<div class="button">
+							<Button rel="external" on:click={handleLogout}>Déconnecter</Button>
+						</div>
+					{:else}
+						<div class="button">
+							<Button rel="external" href="/blog/login">Login</Button>
+						</div>
+					{/if}
 				</div>
 			</div>
 		</nav>

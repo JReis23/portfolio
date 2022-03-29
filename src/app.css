@@ -136,6 +136,38 @@
         line-height: 1.8;
     }
 
+    label {
+		color: var(--lightest-slate);
+		font-family: Fira Code Light;
+		padding: 0.25rem 0;
+		font-size: 1rem;
+	}
+
+    input {
+		padding: 0.6rem 0.6rem;
+		border-radius: 5px;
+		background-color: var(--lightest-slate);
+		color: #0a182e;
+	}
+
+	input:focus,
+	input:active {
+		outline: 4px solid var(--green);
+	}
+
+	textarea {
+		padding: 0.6rem 0.6rem;
+		border-radius: 5px;
+		background-color: var(--lightest-slate);
+		color: #0a182e;
+	}
+
+	textarea:focus,
+	textarea:active {
+		outline: 4px solid var(--green);
+	}
+
+
     span {
         color: var(--green);
     }
@@ -185,7 +217,7 @@
         align-items: center;
         position: relative;
         margin: 1rem 0 2.5rem; 
-        widht: 100%;
+        width: 100%;
         white-space: nowrap;
     }
     

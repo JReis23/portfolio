@@ -1,4 +1,6 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	import supabase from '../../lib/db';
 
 	let email, password, user_name;
@@ -17,7 +19,7 @@
 				}
 			);
 			if (error) throw error;
-			console.log(user);
+			goto('/blog');
 		} catch (error) {
 			alert(error.error_description || error.message);
 		}
@@ -25,9 +27,9 @@
 </script>
 
 <form action="" on:submit|preventDefault={handleSignUp}>
-	<input type="email" placeholder="emmail" bind:value={email} />
-	<input type="password" placeholder="password" bind:value={password} />
-	<input type="text" placeholder="name" bind:value={user_name} />
+	<input type="email" placeholder="Email" bind:value={email} />
+	<input type="password" placeholder="Password" bind:value={password} />
+	<input type="text" placeholder="Username" bind:value={user_name} />
 
 	<button>Submit</button>
 </form>

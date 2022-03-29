@@ -1,46 +1,11 @@
-<!-- <script context="module">
-	export const load = async({ fetch }) => {
-		const query = `
-			query Doubled($x: Int) {
-				double(number: $x)
-			}
-		`;
-
-		const variables = {
-			x: 19,
-		};
-
-		const response = await fetch("/graphql", {
-			body: JSON.stringify({ query, variables }),
-			headers: {
-				"Authorization": "Token ABC123",
-				"Content-Type": "application/json",
-			},
-			method: "POST",
-		});
-
-		const { data, errors } = await response.json();
-
-		if (errors) return {
-			error: new Error(errors.map(({ message }) => message).join("\n")),
-			status: 500,
-		};
-
-		return {
-			props: {
-				doubled: data.double,
-			},
-		};
-	}
-</script> -->
 <script>
-	import Me from '../components/index/Me.svelte';
-	import Main from '../components/index/Main.svelte';
-	import WorkPlaces from '../components/index/WorkPlaces.svelte';
-	import Projects from '../components/index/Projects.svelte';
-	import Contact from '../components/index/Contact.svelte';
-	import Social from '../components/index/Social.svelte';
-	import Landing from '../components/index/Landing.svelte';
+	import Me from '../components/Me.svelte';
+	import Main from '../components/Main.svelte';
+	import WorkPlaces from '../components/WorkPlaces.svelte';
+	import Projects from '../components/Projects.svelte';
+	import Contact from '../components/Contact.svelte';
+	import Social from '../components/Social.svelte';
+	import Landing from '../components/Landing.svelte';
 	import Slide from '../ui/Slide.svelte';
 	import { fade } from 'svelte/transition';
 

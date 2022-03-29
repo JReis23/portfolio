@@ -1,7 +1,7 @@
 <script>
-	import CardRight from '../../ui/CardRight.svelte';
-	import CardLeft from '../../ui/CardLeft.svelte';
-	import ProjectStore from '../../stores/ProjectStore.js';
+	import CardRight from '../ui/CardRight.svelte';
+	import CardLeft from '../ui/CardLeft.svelte';
+	import ProjectStore from '../stores/ProjectStore.js';
 
 	export let projects = [];
 
