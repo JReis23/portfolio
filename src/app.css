@@ -5,7 +5,7 @@
 @layer base{
 
     :root{
-        --dark-navy:hsl(216, 86%, 6%);
+        --dark-navy: hsl(216, 86%, 6%);
         --navy: hsl(216, 65%, 11%);
         --light-navy: hsl(218, 58%, 16%);
         --lightest-navy: hsl(218, 41%, 23%);
@@ -22,7 +22,7 @@
 
     @font-face {
         src: url('../static/font/FiraCode-Light.ttf');
-        font-family: 'Fira Code Light'
+        font-family: 'Fira Code Light';
     }
 
     @font-face {
@@ -92,6 +92,13 @@
 
     main {
         min-height: 100vh;
+        width: 100%;
+		max-width: 1600px;
+		min-height: 100vh;
+		padding: 0 1rem;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
     }
 
     h1 {
@@ -172,19 +179,9 @@
         color: var(--green);
     }
 
-    main {
-		width: 100%;
-		max-width: 1600px;
-		min-height: 100vh;
-		padding: 0 1rem;
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-	}
-
 	@media (min-width: 768px) {
 		main {
-			padding: 0 10rem;
+			padding: 0 8rem;
 		}
 	}
 
@@ -201,10 +198,13 @@
 	}
 
 
-    section {
-        padding: 6rem 0;
-        max-width: 1000px
+    section, article {
+        padding: 4rem 0;
+        max-width: 1000px;
+        width: 100%
     }
+
+    
 
     li {
         font-family: Fira Code Regular;
@@ -216,7 +216,7 @@
         -webkit-box-align: center;
         align-items: center;
         position: relative;
-        margin: 1rem 0 2.5rem; 
+        padding: 2rem 0;
         width: 100%;
         white-space: nowrap;
     }
@@ -236,7 +236,7 @@
         display: block;
         position: relative;
         top: -5px;
-        width: 300px;
+        width: 40%;
         height: 1px;
         margin-left: 1.2rem;
         background: var(--slate);

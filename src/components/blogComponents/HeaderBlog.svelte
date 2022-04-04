@@ -24,7 +24,6 @@
 		try {
 			const { error } = await supabase.auth.signOut();
 			goto('/blog/login');
-			location.reload();
 			if (error) throw error;
 		} catch (error) {
 			alert(error.error_description || error.message);
@@ -73,18 +72,12 @@
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
 						<li class="lnk"><a href="/"> Accueil</a></li>
-						<li class="lnk">
-							<a href="/#experience"> Expérience</a>
+						<!-- <li class="lnk">
+							<a href="/blog#info" on:click|preventDefault={scrollIntoView}> Info</a>
 						</li>
 						<li class="lnk">
-							<a href="/#projets"> Projets</a>
-						</li>
-						<li class="lnk">
-							<a href="/#contact"> Contact</a>
-						</li>
-						<li class="lnk">
-							<a href="/blog"> Blog</a>
-						</li>
+							<a href="/blog#articles" on:click|preventDefault={scrollIntoView}> Articles</a>
+						</li> -->
 					</ol>
 
 					{#if $user}
@@ -139,18 +132,13 @@
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
 						<li class="lnk"><a href="/"> Accueil</a></li>
-						<li class="lnk">
-							<a href="/#experience"> Expérience</a>
+
+						<!-- <li class="lnk">
+							<a href="/blog#info" on:click|preventDefault={scrollIntoView}> Info</a>
 						</li>
 						<li class="lnk">
-							<a href="/#projets"> Projets</a>
-						</li>
-						<li class="lnk">
-							<a href="/#contact"> Contact</a>
-						</li>
-						<li class="lnk">
-							<a href="/blog"> Blog</a>
-						</li>
+							<a href="#articles" on:click|preventDefault={scrollIntoView}> Articles</a>
+						</li> -->
 					</ol>
 					{#if $user}
 						<div class="button">

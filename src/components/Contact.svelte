@@ -56,7 +56,7 @@
 </script>
 
 {#if error !== null}
-	<Modal {showModal}>
+	<Modal>
 		<div class="error justify-center flex">
 			<h5>
 				Il à eu un problème pendant l'envoi de votre formulaire 😅<br /> Envoyez un mail à

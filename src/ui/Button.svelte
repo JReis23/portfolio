@@ -101,6 +101,23 @@
 		background: hsl(0, 84%, 60%);
 	}
 
+	.delLitle {
+		border: 1px solid hsl(0, 84%, 60%);
+		color: hsl(0, 84%, 60%);
+		display: flex;
+		align-items: center;
+		border-radius: 25vh;
+		padding: 0.2rem 0.4rem;
+		font-size: 0.6rem;
+		transition: all 0.3s ease-in-out;
+		width: fit-content;
+	}
+
+	.delLitle:hover {
+		color: var(--navy);
+		background: hsl(0, 84%, 60%);
+	}
+
 	.submit {
 		border: 1px solid var(--green);
 		color: var(--green);

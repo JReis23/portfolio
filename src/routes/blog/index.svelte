@@ -2,10 +2,10 @@
 	import { getPosts } from '../../stores/blogStore';
 
 	export async function load({ fetch, params, session, context }) {
-		const { data, error } = await getPosts();
+		const { posts, error } = await getPosts();
 		return {
 			props: {
-				posts: data,
+				posts,
 				error
 			}
 		};
@@ -13,40 +13,31 @@
 </script>
 
 <script>
-	import PostsCard from '../../ui/PostsCard.svelte';
+	import ArticlesBlog from '../../components/blogComponents/ArticlesBlog.svelte';
 	import { user } from '../../stores/sessionStore';
+
 	export let posts, error;
 </script>
 
 <main class="flex justify-center align-center">
-	<section class="blog">
-		<article class="pb-10">
-			<h2 class="numbered-heading">Blog</h2>
+	<section class="#info">
+		<article>
+			<h2 class="numbered-heading">Info</h2>
 			<h3>
-				{#if $user}Salut {$user.user_metadata.user_name}{:else}Salut{/if}, bienvenue
+				{#if $user}Salut {$user.user_metadata.user_name}{:else}Salut{/if}, bienvenue au mon blog !
 			</h3>
 			<p class="py-6">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod a beatae quibusdam
-				reprehenderit suscipit? Ducimus architecto molestiae qui voluptates eius alias. Consequatur
-				iure nobis minima fuga ex consequuntur, maiores necessitatibus impedit laborum, non,
-				pariatur atque error ipsa at laboriosam esse vero odit excepturi suscipit dolor fugiat? Vel,
-				numquam odit doloremque itaque, at reiciendis atque iure porro, autem asperiores deleniti!
-				Ex adipisci voluptates minus fugiat veniam doloribus expedita, dolore, saepe, perferendis
-				quia impedit doloremque? Vel quasi deleniti excepturi voluptatum optio architecto itaque
-				doloremque natus dolores vitae consectetur placeat atque quibusdam ut, eum asperiores,
-				facilis ea rerum hic! Commodi facilis doloribus dolorum.
+				Ce blog est destiné à montrer mon travail et servira de "cobaye" pour mes expériences au fil
+				du temps. Il sera également un lieu où je publierai des informations sur les technologies
+				dans lesquelles je travaille. Il y aura plusieurs modifications, au fur et à mesure que
+				j'améliorerai mes connaissances. J'ai quelques idées sur la manière de faire évoluer la
+				plateforme, comme créer un chat et essayer d'aider les développeurs web à la recherche de
+				projets. Le blog permet la création de nouveaux articles pour les membres enregistrés.
+				N'hésitez pas à créer des articles qui peuvent aider d'autres développeurs web.
 			</p>
 		</article>
-		<article class="posts">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-				{#each posts as post}
-					<PostsCard {post} />
-				{:else}
-					{error}
-				{/each}
-			</div>
-		</article>
 	</section>
+	<ArticlesBlog {posts} {error} />
 </main>
 
 <style>
@@ -62,7 +53,7 @@
 
 	.numbered-heading::before {
 		position: relative;
-		counter-increment: section 5;
+		counter-increment: section 1;
 		content: '0' counter(section) '.';
 		color: var(--green);
 		font-family: 'Fira Code Light';
@@ -79,9 +70,5 @@
 		height: 1px;
 		margin-left: 1.2rem;
 		background: var(--slate);
-	}
-
-	.posts {
-		counter-reset: my-sec-counter;
 	}
 </style>

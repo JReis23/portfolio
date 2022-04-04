@@ -1,17 +1,9 @@
 <script>
 	import Button from '../ui/Button.svelte';
 	import { openNav } from '../stores/OpenNav';
-	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
 
 	let y = 0;
 	let onMove = 'scrolled';
-
-	onMount(() => {
-		const tl = gsap.timeline({ defaults: { duration: 0.8, opacity: 0 } });
-		tl.from('.lnk', { y: 10, x: -10, stagger: 0.5, delay: 4.6 });
-		tl.from('.button', { y: 10, x: -10 });
-	});
 
 	const handle = () => {
 		$openNav = !$openNav;
@@ -66,15 +58,15 @@
 				</div>
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
-						<li class="lnk"><a href="./#me"> Moi</a></li>
+						<li class="lnk"><a href="#me" on:click|preventDefault={scrollIntoView}> Moi</a></li>
 						<li class="lnk">
-							<a href="./#experience"> Expérience</a>
+							<a href="#experience" on:click|preventDefault={scrollIntoView}> Expérience</a>
 						</li>
 						<li class="lnk">
-							<a href="./#projets"> Projets</a>
+							<a href="#projets" on:click|preventDefault={scrollIntoView}> Projets</a>
 						</li>
 						<li class="lnk">
-							<a href="./#contact"> Contact</a>
+							<a href="#contact" on:click|preventDefault={scrollIntoView}> Contact</a>
 						</li>
 						<li class="lnk">
 							<a href="/blog"> Blog</a>
@@ -129,15 +121,15 @@
 				</div>
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
-						<li class="lnk"><a href="./#me"> Moi</a></li>
+						<li class="lnk"><a href="#me" on:click|preventDefault={scrollIntoView}> Moi</a></li>
 						<li class="lnk">
-							<a href="./#experience"> Expérience</a>
+							<a href="#experience" on:click|preventDefault={scrollIntoView}> Expérience</a>
 						</li>
 						<li class="lnk">
-							<a href="./#projets"> Projets</a>
+							<a href="#projets" on:click|preventDefault={scrollIntoView}> Projets</a>
 						</li>
 						<li class="lnk">
-							<a href="./#contact"> Contact</a>
+							<a href="#contact" on:click|preventDefault={scrollIntoView}> Contact</a>
 						</li>
 						<li class="lnk">
 							<a href="./blog"> Blog</a>

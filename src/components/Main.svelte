@@ -2,7 +2,7 @@
 	import Button from '../ui/Button.svelte';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	import { backIn, backOut, bounceIn, bounceInOut, bounceOut } from 'svelte/easing';
+	import { backIn, backOut, bounceIn, bounceInOut, bounceOut, circInOut } from 'svelte/easing';
 
 	onMount(() => {
 		const tl = gsap.timeline({ defaults: { duration: 0.6, opacity: 0 } });
@@ -10,7 +10,7 @@
 		tl.from('h1', { x: 100 });
 		tl.from('h3', { x: -100 });
 		tl.from('p', { x: 100 });
-		tl.from('.button-main', { scale: 2, ease: bounceOut, duration: 2.5 });
+		tl.from('.button-main', { y: 200, ease: circInOut, duration: 1 });
 	});
 </script>
 
