@@ -74,10 +74,10 @@
 						<li class="lnk"><a href="/"> Accueil</a></li>
 						<!-- <li class="lnk">
 							<a href="/blog#info" on:click|preventDefault={scrollIntoView}> Info</a>
-						</li>
-						<li class="lnk">
-							<a href="/blog#articles" on:click|preventDefault={scrollIntoView}> Articles</a>
 						</li> -->
+						<li class="lnk">
+							<a href="/blog" on:click|preventDefault={scrollIntoView}> blog</a>
+						</li>
 					</ol>
 
 					{#if $user}

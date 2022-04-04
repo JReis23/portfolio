@@ -54,7 +54,7 @@
 					provider: 'github'
 				},
 				{
-					redirectTo: 'http://localhost:3000/blog'
+					redirectTo: 'http://jreis.org/blog'
 				}
 			);
 		} catch (error) {
@@ -72,7 +72,7 @@
 					provider: 'google'
 				},
 				{
-					redirectTo: 'http://localhost:3000/blog'
+					redirectTo: 'http://jreis.org/blog'
 				}
 			);
 		} catch (error) {
@@ -94,7 +94,7 @@
 		<section class="login p-0 rounded-2xl shadow-2xl">
 			<div class="login-body flex flex-col md:flex-row">
 				<div class="w-full md:w-10/12">
-					<img class="" src="../../static/img/login.webp" alt="login" />
+					<img class="" src="/img/login.webp" alt="login" />
 				</div>
 				<div class="w-full flex items-center flex-col justify-center">
 					<h3 class="text-center py-3">Login avec</h3>
