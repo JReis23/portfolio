@@ -1,15 +1,16 @@
 <script>
 	import Button from '../../ui/Button.svelte';
 	import supabase from '../../lib/db';
-	import { openNav } from '../../stores/OpenNav';
+	import { openNavBlog } from '../../stores/OpenNav';
 	import { user, open } from '../../stores/sessionStore';
 	import { goto } from '$app/navigation';
 
 	let y = 0;
 	let onMove = 'scrolled';
 
-	const handle = () => {
-		$openNav = !$openNav;
+	const handleNav = () => {
+		$openNavBlog = !$openNavBlog;
+		// console.log($openNavBlog);
 	};
 
 	function scrollIntoView({ target }) {
@@ -42,7 +43,7 @@
 			<div class="flex">
 				<div class="flex md:hidden justify-end">
 					<svg
-						on:click={handle}
+						on:click={handleNav}
 						fill="var(--green)"
 						width="36"
 						height="36"
@@ -114,7 +115,7 @@
 						viewBox="0 0 64 64"
 						style="enable-background:new 0 0 64 64;"
 						xml:space="preserve"
-						on:click={handle}
+						on:click={handleNav}
 					>
 						<g>
 							<path

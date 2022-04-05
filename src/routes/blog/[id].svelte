@@ -115,10 +115,6 @@
 		max-height: 22rem;
 	}
 
-	.form-control {
-		padding: 0.5rem 0;
-	}
-
 	.post-details :global(li) {
 		color: var(--dark-slate);
 		font-family: 'Calibre Regular';

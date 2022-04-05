@@ -2,7 +2,7 @@
 	import Button from './Button.svelte';
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
-	import { openNav } from '../stores/OpenNav';
+	import { openNavBlog } from '../stores/OpenNav';
 
 	export function scrollIntoView({ target }) {
 		const el = document.querySelector(target.getAttribute('href'));
@@ -10,15 +10,16 @@
 		el.scrollIntoView({
 			behavior: 'smooth'
 		});
-		$openNav = false;
+		$openNavBlog = false;
 	}
 
-	const handleCloseNav = () => {
-		$openNav = false;
+	const handleCloseNavBlog = () => {
+		$openNavBlog = false;
+		console.log($openNavBlog);
 	};
 </script>
 
-{#if $openNav}
+{#if $openNavBlog}
 	<div
 		class="slide-backdrop flex flex-col align-center"
 		in:fly={{ duration: 1500, opacity: 0.5, delay: 300, x: 768, easing: quintOut }}
@@ -26,34 +27,25 @@
 	>
 		<div class="flex flex-col pb-36">
 			<ol class="flex flex-col text-left">
-				<li class="lnk"><a href="#me" on:click|preventDefault={scrollIntoView}> Moi</a></li>
 				<li class="lnk">
-					<a href="#experience" on:click|preventDefault={scrollIntoView}> Expérience</a>
+					<a href="/" on:click={handleCloseNavBlog}> Accueil</a>
 				</li>
 				<li class="lnk">
-					<a href="#projets" on:click|preventDefault={scrollIntoView}> Projets</a>
+					<a href="/blog" on:click|preventDefault={handleCloseNavBlog}> Info</a>
 				</li>
-				<li class="lnk">
-					<a href="#contact" on:click|preventDefault={scrollIntoView}> Contact</a>
-				</li>
-				<li class="lnk">
-					<a href="/blog"> Blog</a>
+				<li class="lnk" on:click|preventDefault={handleCloseNavBlog}>
+					<a href="/blog"> Articles</a>
 				</li>
 			</ol>
 			<div class="button">
-				<Button
-					type="submit"
-					rel="external"
-					href="https://drive.google.com/uc?id=1rHdIcz03FiWetX8JjRCwvVnfiVIvrbfR"
-					target="_blank">Curriculum</Button
-				>
+				<Button type="submit" rel="external" href="/blog/login">Login</Button>
 			</div>
 		</div>
 		<div class="social bottom-0 fixed pb-20">
 			<ul class="flex">
 				<li class="social-link ">
 					<a
-						on:click={handleCloseNav}
+						on:click={handleCloseNavBlog}
 						href="https://github.com/JReis23"
 						target="_blank"
 						class="hover:shadow-xl"
@@ -85,7 +77,7 @@
 				</li>
 				<li class="social-link hover:shadow-xl">
 					<a
-						on:click={handleCloseNav}
+						on:click={handleCloseNavBlog}
 						href="https://www.linkedin.com/in/joao-reis-54199b177/"
 						target="_blank"
 						class="hover:shadow-xl"
@@ -133,7 +125,7 @@
 				</li>
 				<li class="social-link hover:shadow-xl">
 					<a
-						on:click={handleCloseNav}
+						on:click={handleCloseNavBlog}
 						href="https://twitter.com/ego2323"
 						target="_blank"
 						class="hover:shadow-xl"
@@ -164,7 +156,7 @@
 				</li>
 				<li class="social-link hover:shadow-xl">
 					<a
-						on:click={handleCloseNav}
+						on:click={handleCloseNavBlog}
 						href="https://www.facebook.com/joao.reis.5832"
 						target="_blank"
 						class="hover:shadow-xl"

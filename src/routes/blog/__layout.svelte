@@ -3,6 +3,7 @@
 	import LoadingSpinner from '../../components/LoadingSpinner.svelte';
 	import HeaderBlog from '../../components/blogComponents/HeaderBlog.svelte';
 	import { navigating } from '$app/stores';
+	import SlideNavBlog from '../../ui/SlideNavBlog.svelte';
 </script>
 
 <HeaderBlog />
@@ -15,4 +16,5 @@
 			<slot />
 		{/if}
 	</main>
+	<SlideNavBlog />
 </div>
