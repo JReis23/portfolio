@@ -50,7 +50,6 @@
 			})
 		]);
 
-		console.log(content);
 		return { data, error };
 	};
 

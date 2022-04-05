@@ -2,18 +2,12 @@
 	import PostsCard from '../../ui/PostsCard.svelte';
 	import CreatePost from './CreatePost.svelte';
 	import { addPost } from '../../stores/blogStore';
-	import { createEventDispatcher } from 'svelte';
 	import { user } from '../../stores/sessionStore';
 	import { goto } from '$app/navigation';
 
-	const dispatch = createEventDispatcher();
-
-	let image;
-	let image_url;
-	let openModal;
-
 	export let posts;
 	export let error;
+	let openModal;
 
 	const submitNewPost = async (e) => {
 		addPost(
@@ -71,9 +65,10 @@
 			<CreatePost on:newPost={submitNewPost} on:close={closeModalNewPost} />
 		{/if}
 	</div>
-
-	<article class="posts">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+</section>
+<section class="view-posts">
+	<article class="post w-full">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 			{#each posts as post}
 				<PostsCard {post} />
 			{/each}
@@ -82,7 +77,7 @@
 </section>
 
 <style>
-	.posts {
+	.post {
 		counter-reset: my-sec-counter;
 	}
 
@@ -94,5 +89,13 @@
 	button:hover {
 		background-color: rgba(var(--rgba-green), 0.2);
 		transform: scale(1.2);
+	}
+
+	.view-posts {
+		max-width: inherit;
+	}
+
+	article {
+		max-width: inherit;
 	}
 </style>

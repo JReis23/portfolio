@@ -72,11 +72,11 @@
 				<div class="hidden md:visible md:flex">
 					<ol class="flex flex-row items-center">
 						<li class="lnk"><a href="/"> Accueil</a></li>
-						<!-- <li class="lnk">
-							<a href="/blog#info" on:click|preventDefault={scrollIntoView}> Info</a>
-						</li> -->
 						<li class="lnk">
-							<a href="/blog" on:click|preventDefault={scrollIntoView}> blog</a>
+							<a href="/blog#info" on:click|preventDefault={scrollIntoView}> Info</a>
+						</li>
+						<li class="lnk">
+							<a href="/blog#articles"> Articles</a>
 						</li>
 					</ol>
 
@@ -133,12 +133,12 @@
 					<ol class="flex flex-row items-center">
 						<li class="lnk"><a href="/"> Accueil</a></li>
 
-						<!-- <li class="lnk">
+						<li class="lnk">
 							<a href="/blog#info" on:click|preventDefault={scrollIntoView}> Info</a>
 						</li>
 						<li class="lnk">
-							<a href="#articles" on:click|preventDefault={scrollIntoView}> Articles</a>
-						</li> -->
+							<a href="/blog#articles" on:click|preventDefault={scrollIntoView}> Articles</a>
+						</li>
 					</ol>
 					{#if $user}
 						<div class="button">

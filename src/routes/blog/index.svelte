@@ -19,26 +19,24 @@
 	export let posts, error;
 </script>
 
-<main class="flex justify-center align-center">
-	<section class="#info">
-		<article>
-			<h2 class="numbered-heading">Info</h2>
-			<h3>
-				{#if $user}Salut {$user.user_metadata.user_name}{:else}Salut{/if}, bienvenue au mon blog !
-			</h3>
-			<p class="py-6">
-				Ce blog est destiné à montrer mon travail et servira de "cobaye" pour mes expériences au fil
-				du temps. Il sera également un lieu où je publierai des informations sur les technologies
-				dans lesquelles je travaille. Il y aura plusieurs modifications, au fur et à mesure que
-				j'améliorerai mes connaissances. J'ai quelques idées sur la manière de faire évoluer la
-				plateforme, comme créer un chat et essayer d'aider les développeurs web à la recherche de
-				projets. Le blog permet la création de nouveaux articles pour les membres enregistrés.
-				N'hésitez pas à créer des articles qui peuvent aider d'autres développeurs web.
-			</p>
-		</article>
-	</section>
-	<ArticlesBlog {posts} {error} />
-</main>
+<section class="h-screen items-center flex">
+	<article id="#info">
+		<h2 class="numbered-heading">Info</h2>
+		<h3>
+			{#if $user}Salut {$user.user_metadata.user_name}{:else}Salut{/if}, bienvenue au mon blog !
+		</h3>
+		<p class="py-6">
+			Ce blog est destiné à montrer mon travail et servira de "cobaye" pour mes expériences au fil
+			du temps. Il sera également un lieu où je publierai des informations sur les technologies dans
+			lesquelles je travaille. Il y aura plusieurs modifications, au fur et à mesure que
+			j'améliorerai mes connaissances. J'ai quelques idées sur la manière de faire évoluer la
+			plateforme, comme créer un chat et essayer d'aider les développeurs web à la recherche de
+			projets. Le blog permet la création de nouveaux articles pour les membres enregistrés.
+			N'hésitez pas à créer des articles qui peuvent aider d'autres développeurs web.
+		</p>
+	</article>
+</section>
+<ArticlesBlog {posts} {error} />
 
 <style>
 	.numbered-heading {

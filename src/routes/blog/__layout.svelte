@@ -6,9 +6,13 @@
 </script>
 
 <HeaderBlog />
-{#if $navigating}
-	<LoadingSpinner />
-{:else}
-	<Social />
-	<slot />
-{/if}
+<div class="flex justify-center">
+	<main class="flex justify-center">
+		{#if $navigating}
+			<LoadingSpinner />
+		{:else}
+			<Social />
+			<slot />
+		{/if}
+	</main>
+</div>
