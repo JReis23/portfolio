@@ -3,24 +3,31 @@
 	import supabase from '../../lib/db';
 	import { open } from '../../stores/sessionStore';
 	import { goto } from '$app/navigation';
-	import { session } from '$app/stores';
 	import LoadingSpinner from '../../components/LoadingSpinner.svelte';
 
+	let errLogin;
+	let errSignup;
 	let loading = false;
 	let email, password, user_name;
+	let text = `<h1>ici</h1>`;
 
 	const handleLogin = async () => {
 		try {
 			loading = true;
-			let { user, error } = await supabase.auth.signIn({
+			const { user, error } = await supabase.auth.signIn({
 				email,
 				password
 			});
-			if (user) {
+			if (error) throw error;
+			else {
 				goto('/blog');
-			} else if (error) throw error;
+			}
+
+			return { user, error };
 		} catch (error) {
-			alert(error.error_description || error.message);
+			errLogin = error;
+			errLogin.message = `Adresse email ou mot de passe incorrect. Si tu es un nouveau utilisateur click sur "S'ENREGISTRER" pour te créer un compte.`;
+			// error.error_description || error.message;
 		} finally {
 			loading = false;
 		}
@@ -42,7 +49,17 @@
 			if (error) throw error;
 			goto('/blog');
 		} catch (error) {
-			alert(error.error_description || error.message);
+			errSignup = error;
+			if (errSignup.status === 400) {
+				errSignup.message = `Tu es déjà enregistré. Click sur "SE CONNECTER".`;
+			} else if (errSignup.status === 422) {
+				errSignup.message = `Le mot de passe doit contenir au moins 6 caractères.`;
+			} else {
+				errSignup.message = `Une erreur est survenue.`;
+			}
+			{
+			}
+			console.log(errSignup);
 		}
 	};
 
@@ -182,10 +199,14 @@
 								bind:value={password}
 							/>
 						</div>
-						<div class="w-full flex justify-end">
-							<div class="pt-8">
-								<Button>Connecter</Button>
-							</div>
+
+						{#if errLogin}
+							<label for="name" class="border-red-600 border rounded-md bg-red-400 bg-opacity-25">
+								<span class="label-text-alt invalid text-red-600">{errLogin.message}</span>
+							</label>
+						{/if}
+						<div class="w-full flex justify-end py-6">
+							<Button type="submit">Connecter</Button>
 						</div>
 					</form>
 				{:else}
@@ -220,17 +241,24 @@
 								bind:value={user_name}
 							/>
 						</div>
-						<div class="w-full flex justify-end">
-							<div class="pt-8">
-								<Button on:click={handleSignUp}>Enregistrer</Button>
-							</div>
+						{#if errSignup}
+							<label for="name" class="border-red-600 border rounded-md bg-red-400 bg-opacity-25">
+								<span class="label-text-alt invalid text-red-600">{errSignup.message}</span>
+							</label>
+						{/if}
+						<div class="w-full flex justify-end py-6">
+							<Button type="submit" on:click={handleSignUp}>Enregistrer</Button>
 						</div>
 					</form>
 				{/if}
 				{#if !$open}
-					<p class="pt-4 text-sm cursor-pointer" on:click={handleRegister}>s'enregistrer</p>
+					<p class="pt-4 text-sm cursor-pointer uppercase" on:click={handleRegister}>
+						<span>s'enregistrer</span>
+					</p>
 				{:else}
-					<p class="pt-4 text-sm cursor-pointer" on:click={handleRegister}>se connecter</p>
+					<p class="pt-4 text-sm cursor-pointer uppercase" on:click={handleRegister}>
+						<span>se connecter</span>
+					</p>
 				{/if}
 			</div>
 		</div>

@@ -23,7 +23,7 @@
 	};
 </script>
 
-<div class="add-comment w-full py-10">
+<div class="add-comment w-full">
 	<form action="" on:submit|preventDefault={addNewComment}>
 		<div class="form-control">
 			<textarea
@@ -34,7 +34,7 @@
 				use:autosize
 				bind:value={comment}
 			/>
-			<div class="py-6 self-end">
+			<div class="pt-10 pb-4 self-end">
 				<Button>Envoyer</Button>
 			</div>
 		</div>

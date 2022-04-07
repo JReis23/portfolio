@@ -44,9 +44,9 @@
 	};
 </script>
 
-<section class="post-body flex justify-center flex-col">
+<section class="post-body flex justify-center flex-col pt-32">
 	{#await posts then post}
-		<article class="post-body shadow-lg rounded-t-lg p-0">
+		<article class="shadow-lg rounded-t-lg p-0">
 			<div class="top-post-image rounded-t-lg">
 				<img
 					class="w-full rounded-t-lg"
@@ -55,9 +55,9 @@
 				/>
 			</div>
 			<div class="p-4 post-details">
-				<h2 class="py-4">{post.data[0].title}</h2>
+				<h2 class="py-4 uppercase">{post.data[0].title}</h2>
 				<h3>{post.data[0].description}</h3>
-				<p class="py-4">
+				<p class="pt-20">
 					{@html post.data[0].content}
 				</p>
 			</div>
@@ -82,7 +82,7 @@
 	{/await}
 </section>
 
-<section class="rounded-lg flex items-center flex-col comments-section py-0">
+<section class="rounded-lg flex items-center flex-col comments-section mb-10">
 	{#await posts then comments}
 		{#each comments.data[0].comments as comment}
 			<GetComments {comment} />
@@ -98,9 +98,8 @@
 		background: var(--navy);
 	}
 
-	section .post-body {
-		min-height: 100vh;
-		max-height: fit-content;
+	.post-body {
+		min-height: 80vh;
 	}
 	article {
 		background: var(--light-navy);
@@ -112,7 +111,7 @@
 
 	.top-post-image,
 	img {
-		max-height: 22rem;
+		max-height: 30rem;
 	}
 
 	.post-details :global(li) {

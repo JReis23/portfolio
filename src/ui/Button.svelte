@@ -124,8 +124,8 @@
 		display: flex;
 		align-items: center;
 		border-radius: 3px;
-		padding: 0.6rem;
-		font-size: 1.1rem;
+		padding: 0.4rem 0;
+		font-size: 1rem;
 		transition: all 0.3s ease-in-out;
 		width: 100%;
 		justify-content: center;
