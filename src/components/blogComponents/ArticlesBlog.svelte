@@ -10,15 +10,19 @@
 	let openModal;
 
 	const submitNewPost = async (e) => {
-		addPost(
-			e.detail.title,
-			e.detail.description,
-			e.detail.content,
-			e.detail.profile_id,
-			e.detail.image_url
-		);
-		openModal = null;
-		goto('/blog');
+		try {
+			addPost(
+				e.detail.title,
+				e.detail.description,
+				e.detail.content,
+				e.detail.profile_id,
+				e.detail.image_url
+			);
+			openModal = null;
+			goto('/blog');
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	const openModalNewPost = () => {

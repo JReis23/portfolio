@@ -26,8 +26,6 @@
 			else {
 				goto('/blog');
 			}
-
-			console.log(session);
 			return { userDetails, session, error };
 		} catch (error) {
 			errLogin = error;
@@ -52,7 +50,9 @@
 				}
 			);
 			if (error) throw error;
-			goto('/blog');
+			else {
+				goto('/blog');
+			}
 		} catch (error) {
 			errSignup = error;
 			if (errSignup.status === 400) {
@@ -62,7 +62,6 @@
 			} else {
 				errSignup.message = `Une erreur est survenue.`;
 			}
-			console.log(errSignup.message);
 		}
 	};
 

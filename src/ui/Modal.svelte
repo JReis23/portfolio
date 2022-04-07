@@ -54,8 +54,7 @@
 
 	.modal-content {
 		width: 90%;
-		min-height: 70%;
-		max-height: 90%;
+		height: clamp (50%, 70%, 100%);
 		background: var(--light-navy);
 		display: flex;
 		align-items: center;
