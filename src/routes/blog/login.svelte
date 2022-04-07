@@ -62,9 +62,7 @@
 			} else {
 				errSignup.message = `Une erreur est survenue.`;
 			}
-			{
-			}
-			console.log(errSignup);
+			console.log(errSignup.message);
 		}
 	};
 
