@@ -5,6 +5,7 @@
 	import { addComments } from '../../stores/blogStore';
 	import { user } from '../../stores/sessionStore';
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 
 	let id = $page.params.id;
 	let profile_id, comment, post_id;
@@ -16,10 +17,13 @@
 	};
 
 	const addNewComment = () => {
-		profile_id = $user.id;
-		post_id = id;
-		addComments(comment, profile_id, post_id);
-		console.log(addNewComment);
+		if ((profile_id = $user.id)) {
+			profile_id = $user.id;
+			post_id = id;
+			addComments(comment, profile_id, post_id);
+		} else {
+			goto('/login');
+		}
 	};
 </script>
 
