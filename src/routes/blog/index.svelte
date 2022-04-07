@@ -1,5 +1,4 @@
 <script context="module">
-	import SlideNavBlog from '../../ui/SlideNavBlog.svelte';
 	import { getPosts } from '../../stores/blogStore';
 
 	export async function load({ fetch, params, session, context }) {

@@ -10,7 +10,6 @@
 
 	const handleNav = () => {
 		$openNavBlog = !$openNavBlog;
-		// console.log($openNavBlog);
 	};
 
 	function scrollIntoView({ target }) {
@@ -24,6 +23,7 @@
 	const handleLogout = async () => {
 		try {
 			const { error } = await supabase.auth.signOut();
+			$user = false;
 			goto('/blog/login');
 			if (error) throw error;
 		} catch (error) {

@@ -1,7 +1,7 @@
 <script>
 	import Button from '../../ui/Button.svelte';
 	import supabase from '../../lib/db';
-	import { open } from '../../stores/sessionStore';
+	import { open, user } from '../../stores/sessionStore';
 	import { goto } from '$app/navigation';
 	import LoadingSpinner from '../../components/LoadingSpinner.svelte';
 
@@ -9,21 +9,26 @@
 	let errSignup;
 	let loading = false;
 	let email, password, user_name;
-	let text = `<h1>ici</h1>`;
 
 	const handleLogin = async () => {
 		try {
 			loading = true;
-			const { user, error } = await supabase.auth.signIn({
+			const {
+				user: userDetails,
+				session,
+				error
+			} = await supabase.auth.signIn({
 				email,
 				password
 			});
+			$user = userDetails;
 			if (error) throw error;
 			else {
 				goto('/blog');
 			}
 
-			return { user, error };
+			console.log(session);
+			return { userDetails, session, error };
 		} catch (error) {
 			errLogin = error;
 			errLogin.message = `Adresse email ou mot de passe incorrect. Si tu es un nouveau utilisateur click sur "S'ENREGISTRER" pour te créer un compte.`;
