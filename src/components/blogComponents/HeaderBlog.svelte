@@ -98,7 +98,7 @@
 	<header class="{onMove} shadow-xl">
 		<nav class="w-full flex justify-between items-center">
 			<div class="logo">
-				<img src="../static/img/vectorpaint.svg" alt="" />
+				<img src="/img/vectorpaint.svg" alt="" />
 			</div>
 			<div class="flex">
 				<div class="flex visible md:invisible justify-end">
