@@ -1,9 +1,9 @@
 <script>
 	import Modal from '../../ui/Modal.svelte';
-	import { user } from '../../stores/sessionStore';
-	import { createEventDispatcher } from 'svelte';
 	import Button from '../../ui/Button.svelte';
 	import supabase from '$lib/db';
+	import { user } from '../../stores/sessionStore';
+	import { createEventDispatcher } from 'svelte';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 
@@ -84,14 +84,6 @@
 			} else {
 				error.description = '';
 			}
-
-			// if (content === null || content.trim().length <= 50) {
-			// 	error.content = 'Le contenu doit contenir plus de 50 caractères';
-			// } else {
-			// 	error.content = '';
-			// }
-
-			console.log(error.title);
 		}
 	};
 

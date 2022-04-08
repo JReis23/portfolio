@@ -1,8 +1,11 @@
 <script>
 	import Button from './Button.svelte';
+	import supabase from '../lib/db';
+	import { goto } from '$app/navigation';
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { openNavBlog } from '../stores/OpenNav';
+	import { user } from '../stores/sessionStore';
 
 	export function scrollIntoView({ target }) {
 		const el = document.querySelector(target.getAttribute('href'));
@@ -16,6 +19,20 @@
 	const handleCloseNavBlog = () => {
 		$openNavBlog = false;
 		console.log($openNavBlog);
+	};
+
+	const handleLogout = async () => {
+		try {
+			const { error } = await supabase.auth.signOut();
+			$user = false;
+			goto('/blog/login');
+			if (error) throw error;
+			else {
+				$openNavBlog = false;
+			}
+		} catch (error) {
+			alert(error.error_description || error.message);
+		}
 	};
 </script>
 
@@ -37,9 +54,15 @@
 					<a href="/blog"> Articles</a>
 				</li>
 			</ol>
-			<div class="button">
-				<Button type="submit" rel="external" href="/blog/login">Login</Button>
-			</div>
+			{#if $user}
+				<div class="button">
+					<Button rel="external" type="submit" on:click={handleLogout}>Déconnecter</Button>
+				</div>
+			{:else}
+				<div class="button">
+					<Button rel="external" type="submit" href="/blog/login">Login</Button>
+				</div>
+			{/if}
 		</div>
 		<div class="social bottom-0 fixed pb-20">
 			<ul class="flex">

@@ -38,7 +38,7 @@
 	<header>
 		<nav class="w-full flex justify-between items-center">
 			<div class="logo">
-				<img src="../../img/vectorpaint.svg" alt="logo joao reis" />
+				<img src="/img/vectorpaint.svg" alt="logo joao reis" />
 			</div>
 			<div class="flex">
 				<div class="flex md:hidden justify-end">

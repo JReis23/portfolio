@@ -19,10 +19,8 @@
 
 	let posts = fetchPost();
 
-	const submitUpdatePost = async (e) => {
-		updatePost(e.detail.title, e.detail.description, e.detail.content);
-		openModal = null;
-		console.log(submitUpdatePost);
+	const submitUpdatePost = async () => {
+		updatePost((openModal = null));
 	};
 
 	const openModalUpdatePost = () => {
@@ -57,7 +55,7 @@
 			<div class="p-4 post-details">
 				<h2 class="py-4 uppercase">{post.data[0].title}</h2>
 				<h3>{post.data[0].description}</h3>
-				<p class="pt-20">
+				<p class="py-10">
 					{@html post.data[0].content}
 				</p>
 			</div>

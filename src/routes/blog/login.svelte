@@ -30,8 +30,9 @@
 		} catch (error) {
 			errLogin = error;
 			errLogin.message = `Adresse email ou mot de passe incorrect. Si tu es un nouveau utilisateur click sur "S'ENREGISTRER" pour te créer un compte.`;
-			// error.error_description || error.message;
 		} finally {
+			email = '';
+			password = '';
 			loading = false;
 		}
 	};
@@ -62,6 +63,10 @@
 			} else {
 				errSignup.message = `Une erreur est survenue.`;
 			}
+		} finally {
+			email = '';
+			password = '';
+			user_name = '';
 		}
 	};
 
@@ -208,7 +213,7 @@
 							</label>
 						{/if}
 						<div class="w-full flex justify-end py-6">
-							<Button type="submit">Connecter</Button>
+							<Button type="submit" on:submit={handleLogin}>Connecter</Button>
 						</div>
 					</form>
 				{:else}
@@ -236,7 +241,7 @@
 						</div>
 						<div class="form-control py-2">
 							<input
-								class="inputField pl-10"
+								class="inputField user pl-10"
 								type="text"
 								placeholder="Username"
 								required
@@ -315,13 +320,19 @@
 	}
 
 	.email {
-		background-image: url('../../static/img/envelope.svg');
+		background-image: url('/img/envelope.svg');
 		background-repeat: no-repeat;
 		background-position: left;
 	}
 
 	.password {
-		background-image: url('../../static/img/lock-alt.svg');
+		background-image: url('/img/lock-alt.svg');
+		background-repeat: no-repeat;
+		background-position: left;
+	}
+
+	.user {
+		background-image: url('/img/users.svg');
 		background-repeat: no-repeat;
 		background-position: left;
 	}
