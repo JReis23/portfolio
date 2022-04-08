@@ -13,16 +13,20 @@
 	const handleLogin = async () => {
 		try {
 			loading = true;
-			const { user, session, error } = await supabase.auth.signIn({
+			const {
+				user: userDetails,
+				session,
+				error
+			} = await supabase.auth.signIn({
 				email,
 				password
 			});
-			// $user = userDetails;
+			$user = userDetails;
 			if (error) throw error;
 			else {
 				goto('/blog');
 			}
-			return { user, session, error };
+			return { userDetails, session, error };
 		} catch (error) {
 			errLogin = error;
 			errLogin.message = `Adresse email ou mot de passe incorrect. Si tu es un nouveau utilisateur click sur "S'ENREGISTRER" pour te créer un compte.`;
