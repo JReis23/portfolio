@@ -29,7 +29,7 @@
 				openModal = 'add';
 			} else {
 				error = 'You must be logged in to create a post';
-				goto('/login');
+				goto('/blog/login');
 			}
 		} catch (error) {}
 	};
