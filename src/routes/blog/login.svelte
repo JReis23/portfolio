@@ -78,7 +78,7 @@
 					provider: 'github'
 				},
 				{
-					redirectTo: 'http://jreis.org/blog'
+					redirectTo: 'https://jreis.org/blog'
 				}
 			);
 		} catch (error) {
@@ -96,7 +96,7 @@
 					provider: 'google'
 				},
 				{
-					redirectTo: 'http://jreis.org/blog'
+					redirectTo: 'https://jreis.org/blog'
 				}
 			);
 		} catch (error) {
