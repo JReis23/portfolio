@@ -18,7 +18,6 @@
 
 	const handleCloseNavBlog = () => {
 		$openNavBlog = false;
-		console.log($openNavBlog);
 	};
 
 	const handleLogout = async () => {

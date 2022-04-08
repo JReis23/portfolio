@@ -49,7 +49,6 @@
 				theme: 'snow',
 				placeholder: `${doc.body.textContent}`
 			});
-			console.log(quill);
 		}, 2000);
 	});
 

@@ -25,15 +25,6 @@ export const getProfiles = async () => {
 
 export const getPosts = async () => {
 	let { data: posts, error } = await supabase.from('posts').select('*, profile_id(*)');
-	// const mySubscription = supabase
-	// 	.from('posts')
-	// 	.on('INSERT', (payload) => {
-	// 		blog.set([...data, payload.new]);
-	// 		console.log(blog);
-	// 	})
-	// 	.subscribe();
-	// mySubscription.unsubscribe();
-	// console.log(mySubscription);
 	return { posts, error };
 };
 

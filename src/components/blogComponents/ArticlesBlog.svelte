@@ -20,9 +20,7 @@
 			);
 			openModal = null;
 			goto('/blog');
-		} catch (error) {
-			console.log(error);
-		}
+		} catch (error) {}
 	};
 
 	const openModalNewPost = () => {

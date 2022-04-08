@@ -24,7 +24,6 @@
 			return { user, session, error };
 		} catch (error) {
 			errLogin = error;
-			console.log(errLogin);
 			errLogin.message = `Adresse email ou mot de passe incorrect. Si tu es un nouveau utilisateur click sur "S'ENREGISTRER" pour te créer un compte.`;
 		} finally {
 			email = '';
@@ -105,9 +104,6 @@
 	const handleRegister = async () => {
 		$open = !$open;
 	};
-
-	console.log($user);
-	console.log(user);
 </script>
 
 {#if loading}

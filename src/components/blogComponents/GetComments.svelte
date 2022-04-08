@@ -12,8 +12,6 @@
 		const { data, error } = await supabase.from('comments').delete().eq('id', comment.id);
 		return { data, error };
 	};
-
-	console.log($user);
 </script>
 
 <div class="user-comments w-10/12 border-b py-16">

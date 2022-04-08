@@ -15,7 +15,7 @@
 <script>
 	import ArticlesBlog from '../../components/blogComponents/ArticlesBlog.svelte';
 	import { user } from '../../stores/sessionStore';
-	console.log($user);
+
 	export let posts, error;
 </script>
 
@@ -23,7 +23,8 @@
 	<article id="#info">
 		<h2 class="numbered-heading">Info</h2>
 		<h3>
-			Salut, {$user?.email ? $user?.email : ''} bienvenue au mon blog !
+			Salut, {$user?.user_metadata.user_name ? $user?.user_metadata.user_name : ''} bienvenue au mon
+			blog !
 		</h3>
 		<p class="py-6">
 			Ce blog est destiné à montrer mon travail et servira de "cobaye" pour mes expériences au fil
