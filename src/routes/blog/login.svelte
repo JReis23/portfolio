@@ -85,7 +85,6 @@
 			);
 		} catch (error) {
 			alert(error.error_description || error.message);
-			console.log(error);
 		} finally {
 			loading = false;
 		}
@@ -99,7 +98,7 @@
 					provider: 'google'
 				},
 				{
-					redirectTo: 'http://localhost:3000/blog'
+					redirectTo: 'https://jreis.org/blog'
 				}
 			);
 		} catch (error) {
@@ -112,6 +111,8 @@
 	const handleRegister = async () => {
 		$open = !$open;
 	};
+
+	console.log($user);
 </script>
 
 {#if loading}
