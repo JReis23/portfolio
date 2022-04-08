@@ -13,21 +13,15 @@
 	const handleLogin = async () => {
 		try {
 			loading = true;
-			const {
-				user: userDetails,
-				session,
-				error
-			} = await supabase.auth.signIn({
+			const { user, session, error } = await supabase.auth.signIn({
 				email,
 				password
 			});
-			$user = userDetails;
 			if (error) throw error;
 			else {
 				goto('/blog');
 			}
-			console.log(userDetails);
-			return { userDetails, session, error };
+			return { user, session, error };
 		} catch (error) {
 			errLogin = error;
 			console.log(errLogin);
