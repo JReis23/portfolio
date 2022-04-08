@@ -7,6 +7,10 @@
 	import '../../app.css';
 </script>
 
+<svelte:head>
+	<title>Joao REIS - Blog développeur Web</title>
+</svelte:head>
+
 <HeaderBlog />
 <div class="flex justify-center">
 	<main class="flex justify-center py-20 sm:py-0">

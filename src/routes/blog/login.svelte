@@ -99,7 +99,7 @@
 					provider: 'google'
 				},
 				{
-					redirectTo: 'https://jreis.org/blog'
+					redirectTo: 'http://localhost:3000/blog'
 				}
 			);
 		} catch (error) {
