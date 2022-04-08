@@ -2,7 +2,7 @@
 	import Button from '../../ui/Button.svelte';
 	import supabase from '../../lib/db';
 	import { openNavBlog } from '../../stores/OpenNav';
-	import { user, open } from '../../stores/sessionStore';
+	import { user } from '../../stores/sessionStore';
 	import { goto } from '$app/navigation';
 
 	let y = 0;
@@ -23,7 +23,6 @@
 	const handleLogout = async () => {
 		try {
 			const { error } = await supabase.auth.signOut();
-			$user = false;
 			goto('/blog/login');
 			if (error) throw error;
 		} catch (error) {
