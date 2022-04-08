@@ -28,7 +28,7 @@
 			if ($user) {
 				openModal = 'add';
 			} else {
-				error;
+				goto('/login');
 			}
 		} catch (error) {}
 	};
