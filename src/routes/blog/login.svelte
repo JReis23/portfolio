@@ -85,6 +85,7 @@
 			);
 		} catch (error) {
 			alert(error.error_description || error.message);
+			console.log(error);
 		} finally {
 			loading = false;
 		}
