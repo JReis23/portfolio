@@ -26,7 +26,7 @@
 			else {
 				goto('/blog');
 			}
-			console.log(error);
+			console.log(userDetails);
 			return { userDetails, session, error };
 		} catch (error) {
 			errLogin = error;
@@ -113,6 +113,7 @@
 	};
 
 	console.log($user);
+	console.log(user);
 </script>
 
 {#if loading}
