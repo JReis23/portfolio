@@ -4,11 +4,13 @@
 	import LoadingSpinner from '../../components/LoadingSpinner.svelte';
 	import { open, user } from '../../stores/sessionStore';
 	import { goto } from '$app/navigation';
+	import { getProfiles } from '../../stores/blogStore';
 
 	let errLogin;
 	let errSignup;
 	let loading = false;
 	let email, password, username;
+	let profiles;
 
 	const handleLogin = async () => {
 		try {
@@ -82,55 +84,44 @@
 	const LoginWithGithub = async () => {
 		try {
 			loading = true;
-			const { user, session, error } = await supabase.auth.signIn({
-				provider: 'github'
+			const { user, session, error } = await supabase.auth.signIn(
+				{
+					provider: 'github'
+				},
+				{
+					redirectTo: '/blog'
+				}
+			);
+
+			getProfiles().then((data) => {
+				if (data.profiles[0].username === null || undefined) {
+					goto('/blog/user');
+				} else {
+					goto('/blog');
+				}
+				return data;
 			});
 		} catch (error) {
 			alert(error.error_description || error.message);
 		} finally {
-			if ($user) {
-				try {
-					let id = $user.id;
-					const { data, error: err } = await supabase
-						.from('profiles')
-						.update({ username })
-						.eq('id', id);
-					if (err) throw err;
-					return { data, err };
-				} catch (err) {
-					alert(err);
-				}
-				loading = false;
-			}
+			loading = false;
 		}
 	};
 
 	async function signInWithGoogle() {
 		try {
 			loading = true;
-			const { user, session, error } = await supabase.auth.signIn({
-				provider: 'google'
-			});
+			const { user, session, error } = await supabase.auth.signIn(
+				{
+					provider: 'google'
+				},
+				{
+					redirectTo: '/blog'
+				}
+			);
 		} catch (error) {
 			alert(error.error_description || error.message);
 		} finally {
-			if ($user) {
-				try {
-					let id = $user.id;
-					const { data, error: err } = await supabase
-						.from('profiles')
-						.update({ username })
-						.eq('id', id);
-					if (err) throw err;
-					return { data, err };
-				} catch (err) {
-					alert(err);
-				} finally {
-					if ($user.user_metadata.user_name === null || undefined) {
-						goto('/blog/user');
-					}
-				}
-			}
 			loading = false;
 		}
 	}
