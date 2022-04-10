@@ -16,6 +16,7 @@
 	import ArticlesBlog from '../../components/blogComponents/ArticlesBlog.svelte';
 	import { user } from '../../stores/sessionStore';
 
+	console.log($user);
 	export let posts, error;
 </script>
 

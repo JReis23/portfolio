@@ -1,14 +1,14 @@
 <script>
 	import Button from '../../ui/Button.svelte';
 	import supabase from '../../lib/db';
+	import LoadingSpinner from '../../components/LoadingSpinner.svelte';
 	import { open, user } from '../../stores/sessionStore';
 	import { goto } from '$app/navigation';
-	import LoadingSpinner from '../../components/LoadingSpinner.svelte';
 
 	let errLogin;
 	let errSignup;
 	let loading = false;
-	let email, password, user_name;
+	let email, password, username;
 
 	const handleLogin = async () => {
 		try {
@@ -34,21 +34,14 @@
 
 	const handleSignUp = async () => {
 		try {
-			const { user, session, error } = await supabase.auth.signUp(
-				{
-					email,
-					password
-				},
-				{
-					data: {
-						user_name
-					}
-				}
-			);
+			const { user, session, error } = await supabase.auth.signUp({
+				email,
+				password
+			});
+
 			if (error) throw error;
-			else {
-				goto('/blog');
-			}
+
+			return { user, session, error };
 		} catch (error) {
 			errSignup = error;
 			if (errSignup.status === 400) {
@@ -59,44 +52,85 @@
 				errSignup.message = `Une erreur est survenue.`;
 			}
 		} finally {
-			email = '';
-			password = '';
-			user_name = '';
+			if ($user) {
+				try {
+					let id = $user.id;
+					const { data, error: err } = await supabase
+						.from('profiles')
+						.update({ username })
+						.eq('id', id);
+					if (err) throw err;
+					else {
+						email = '';
+						password = '';
+						username = '';
+						goto('/blog');
+					}
+					return { data, err };
+				} catch (err) {
+					alert(err);
+				}
+			} else {
+				email = '';
+				password = '';
+				username = '';
+				loading = false;
+			}
 		}
 	};
 
 	const LoginWithGithub = async () => {
 		try {
 			loading = true;
-			const { user, session, error } = await supabase.auth.signIn(
-				{
-					provider: 'github'
-				},
-				{
-					redirectTo: 'https://jreis.org/blog'
-				}
-			);
+			const { user, session, error } = await supabase.auth.signIn({
+				provider: 'github'
+			});
 		} catch (error) {
 			alert(error.error_description || error.message);
 		} finally {
-			loading = false;
+			if ($user) {
+				try {
+					let id = $user.id;
+					const { data, error: err } = await supabase
+						.from('profiles')
+						.update({ username })
+						.eq('id', id);
+					if (err) throw err;
+					return { data, err };
+				} catch (err) {
+					alert(err);
+				}
+				loading = false;
+			}
 		}
 	};
 
 	async function signInWithGoogle() {
 		try {
 			loading = true;
-			const { user, session, error } = await supabase.auth.signIn(
-				{
-					provider: 'google'
-				},
-				{
-					redirectTo: 'https://jreis.org/blog'
-				}
-			);
+			const { user, session, error } = await supabase.auth.signIn({
+				provider: 'google'
+			});
 		} catch (error) {
 			alert(error.error_description || error.message);
 		} finally {
+			if ($user) {
+				try {
+					let id = $user.id;
+					const { data, error: err } = await supabase
+						.from('profiles')
+						.update({ username })
+						.eq('id', id);
+					if (err) throw err;
+					return { data, err };
+				} catch (err) {
+					alert(err);
+				} finally {
+					if ($user.user_metadata.user_name === null || undefined) {
+						goto('/blog/user');
+					}
+				}
+			}
 			loading = false;
 		}
 	}
@@ -240,7 +274,7 @@
 								type="text"
 								placeholder="Username"
 								required
-								bind:value={user_name}
+								bind:value={username}
 							/>
 						</div>
 						{#if errSignup}
