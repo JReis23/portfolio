@@ -1,12 +1,16 @@
 <script context="module">
-	import { getPosts } from '../../stores/blogStore';
+	import { getPosts, getProfiles } from '../../stores/blogStore';
+	import { user } from '../../stores/sessionStore';
 
 	export async function load({ fetch, params, session, context }) {
 		const { posts, error } = await getPosts();
+		const { profiles, error: err } = await getProfiles();
 		return {
 			props: {
 				posts,
-				error
+				profiles,
+				error,
+				err
 			}
 		};
 	}
@@ -14,18 +18,19 @@
 
 <script>
 	import ArticlesBlog from '../../components/blogComponents/ArticlesBlog.svelte';
-	import { user } from '../../stores/sessionStore';
+	// import { user } from '../../stores/sessionStore';
 
 	console.log($user);
-	export let posts, error;
+	export let posts, error, profiles;
+
+	console.log(profiles);
 </script>
 
 <section class="h-screen items-center flex">
 	<article id="#info">
 		<h2 class="numbered-heading">Info</h2>
 		<h3>
-			Salut, {$user?.user_metadata.user_name ? $user?.user_metadata.user_name : ''} bienvenue au mon
-			blog !
+			Salut, {profiles?.username ? profiles?.username : ''} bienvenue au mon blog !
 		</h3>
 		<p class="py-6">
 			Ce blog est destiné à montrer mon travail et servira de "cobaye" pour mes expériences au fil

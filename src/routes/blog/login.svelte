@@ -89,7 +89,7 @@
 					provider: 'github'
 				},
 				{
-					redirectTo: 'https://www.jreis.org/blog'
+					redirectTo: 'https://jreis.org/blog'
 				}
 			);
 		} catch (error) {
@@ -99,7 +99,7 @@
 		}
 	};
 
-	async function signInWithGoogle() {
+	const signInWithGoogle = async () => {
 		try {
 			loading = true;
 			const { user, session, error } = await supabase.auth.signIn(
@@ -107,7 +107,7 @@
 					provider: 'google'
 				},
 				{
-					redirectTo: 'https://www.jreis.org/blog'
+					redirectTo: 'https://jreis.org/blog'
 				}
 			);
 		} catch (error) {
@@ -115,7 +115,7 @@
 		} finally {
 			loading = false;
 		}
-	}
+	};
 
 	const handleRegister = async () => {
 		$open = !$open;
