@@ -92,15 +92,6 @@
 					redirectTo: 'https://www.jreis.org/blog'
 				}
 			);
-
-			getProfiles().then((data) => {
-				if (data.profiles[0].username === null || undefined) {
-					goto('/blog/user');
-				} else {
-					goto('/blog');
-				}
-				return data;
-			});
 		} catch (error) {
 			alert(error.error_description || error.message);
 		} finally {
@@ -116,7 +107,7 @@
 					provider: 'google'
 				},
 				{
-					redirectTo: '/blog'
+					redirectTo: 'https://www.jreis.org/blog'
 				}
 			);
 		} catch (error) {
