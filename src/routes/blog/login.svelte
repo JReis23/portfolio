@@ -9,7 +9,7 @@
 	let errLogin;
 	let errSignup;
 	let loading = false;
-	let email, password, username;
+	let email, password, user_name;
 	let profiles;
 
 	const handleLogin = async () => {
@@ -36,11 +36,17 @@
 
 	const handleSignUp = async () => {
 		try {
-			const { user, session, error } = await supabase.auth.signUp({
-				email,
-				password
-			});
-
+			const { user, session, error } = await supabase.auth.signUp(
+				{
+					email,
+					password
+				},
+				{
+					data: {
+						user_name
+					}
+				}
+			);
 			if (error) throw error;
 
 			return { user, session, error };
@@ -54,30 +60,29 @@
 				errSignup.message = `Une erreur est survenue.`;
 			}
 		} finally {
-			if ($user) {
-				try {
-					let id = $user.id;
-					const { data, error: err } = await supabase
-						.from('profiles')
-						.update({ username })
-						.eq('id', id);
-					if (err) throw err;
-					else {
-						email = '';
-						password = '';
-						username = '';
-						goto('/blog');
-					}
-					return { data, err };
-				} catch (err) {
-					alert(err);
-				}
-			} else {
-				email = '';
-				password = '';
-				username = '';
-				loading = false;
-			}
+			// if ($user) {
+			// 	try {
+			// 		let id = $user.id;
+			// 		const { data, error: err } = await supabase
+			// 			.from('profiles')
+			// 			.update({ user_name })
+			// 			.eq('id', id);
+			// 		if (err) throw err;
+			// 		else {
+			// 			email = '';
+			// 			password = '';
+			// 			user_name = '';
+			// 			goto('/blog');
+			// 		}
+			// 		return { data, err };
+			// 	} catch (err) {
+			// 		alert(err);
+			// 	}
+			// } else {
+			email = '';
+			password = '';
+			user_name = '';
+			loading = false;
 		}
 	};
 
@@ -254,9 +259,9 @@
 							<input
 								class="inputField user pl-10"
 								type="text"
-								placeholder="Username"
+								placeholder="User_name"
 								required
-								bind:value={username}
+								bind:value={user_name}
 							/>
 						</div>
 						{#if errSignup}
