@@ -18,18 +18,6 @@
 			stagger: 0.5
 		});
 	});
-
-	// let github;
-	// let linkedin = false;
-	// let twitter = false;
-	// let facebook = false;
-
-	// const slideGithub = () => {
-	// 	github = 'open';
-	// };
-	// onMount(() => {
-	// 	setTimeout(slideGithub, 1000);
-	// });
 </script>
 
 <div class="social fixed bottom-0 left-0">

@@ -1,7 +1,7 @@
 <script>
 	import Button from '../ui/Button.svelte';
 
-	export let societyButton = 'noveoo';
+	export let societyButton = 'lectra';
 
 	const handleNoveoo = () => {
 		societyButton = 'noveoo';
@@ -19,12 +19,8 @@
 		societyButton = 'patriarca';
 	};
 
-	const handleMorousseau = () => {
-		societyButton = 'morousseau';
-	};
-
-	const handleVodafone = () => {
-		societyButton = 'vodafone';
+	const handleLectra = () => {
+		societyButton = 'lectra';
 	};
 </script>
 
@@ -32,6 +28,11 @@
 	<h2 class="numbered-heading">Où j'ai travaillé</h2>
 	<div class="flex flex-col md:flex-row">
 		<div class="buttons flex flex-row md:flex-col self-center">
+			<Button
+				on:click={handleLectra}
+				active={societyButton === 'lectra' ? 'active' : null}
+				type="secondary">Lectra</Button
+			>
 			<Button
 				on:click={handleNoveoo}
 				active={societyButton === 'noveoo' ? 'active' : null}
@@ -51,12 +52,6 @@
 				on:click={handlePatriarca}
 				active={societyButton === 'patriarca' ? 'active' : null}
 				type="secondary">Patriarca</Button
-			>
-
-			<Button
-				on:click={handleVodafone}
-				active={societyButton === 'vodafone' ? 'active' : null}
-				type="secondary">Vodafone</Button
 			>
 		</div>
 		<div class="md:px-8 ">
@@ -141,20 +136,28 @@
 						Gestion de projet avec l'utlisation de la méthodologie Agile avec une approche Scrum.
 					</li>
 				</ul>
-			{:else if societyButton === 'vodafone'}
+			{:else if societyButton === 'lectra'}
 				<div class="py-6">
 					<h3>
-						Conducteur de travaux <span
-							>@ <a href="https://www.vodafone.pt/" target="_blank">Vodafone Portugal</a></span
+						Développeur logiciel en JavaScript <span
+							>@ <a href="https://www.lectra.com/fr" target="_blank">Lectra France</a></span
 						>
 					</h3>
-					<p>Janvier 2007 à Janvier 2010</p>
+					<p>Juin <span>2022</span> à <span>Présent</span></p>
 				</div>
 				<ul>
-					<li>Contribution au bon déroulement des différentes tâches de back-office.</li>
-					<li>Gestion des plaintes formulées par les clients.</li>
 					<li>
-						Proposition de solutions dans le but d’optimiser le relationnel clientèle /entreprise.
+						Intégré au sein d’une équipe <span><strong>AGILE</strong></span>, je participe à
+						l’implémentation et l’intégration du PLM de la société dans les écosystèmes des clients.
+					</li>
+					<li>
+						Ces activités consistent à de l’analyse / conception, du développement des
+						personnalisations, de la revue de code et de la validation manuelle.
+					</li>
+					<li>
+						Je participe à l’accompagnement technico fonctionnel des filiales et des clients
+						worldwide, de l’implémentation de process métiers clients, de l’intégration avec
+						l’écosystème clients et de la livraison des PLM.
 					</li>
 				</ul>
 			{/if}
@@ -169,12 +172,10 @@
 		position: relative;
 		font-size: 1.7rem;
 		color: var(--green);
-		font-family: Calibre Regular;
 	}
 
 	li {
 		color: var(--slate);
-		font-family: Calibre Regular;
 		max-width: 50ch;
 		font-size: 1.175em;
 		padding: auto;
@@ -196,11 +197,6 @@
 		animation: border_anim 0.7s forwards;
 	}
 
-	p {
-		font-family: Fira Code Light;
-		font-size: 0.775rem;
-	}
-
 	@keyframes border_anim {
 		0% {
 			width: 0%;
@@ -215,11 +211,11 @@
 			padding: 0.375rem 1rem;
 		}
 
-		.buttons {
+		/* .buttons {
 			overflow-x: scroll;
 			-webkit-overflow-scrolling: touch;
 			width: 98vw;
 			white-space: nowrap;
-		}
+		} */
 	}
 </style>
